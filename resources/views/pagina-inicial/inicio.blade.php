@@ -48,7 +48,7 @@
 
     </header>
 
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+<section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('vendor/public/imagens/pagina-inicial/arvore1.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -57,21 +57,22 @@
 
             <div class="row home-content__main">
 
-                <h3>Welcome to Glint</h3>
+                <h3>PROJETO AO</h3>
 
                 <h1>
-                    We are a creative group <br>
-                    of people who design <br>
-                    influential brands and <br>
-                    digital experiences.
+                    Bem vindo a uma <br>
+                    rede social diferente <br>
+                    de todas <br>
+                    {{-- AO é voltada em prol do <br>
+                    meio ambiente. --}}
                 </h1>
 
                 <div class="home-content__buttons">
-                    <a href="#contact" class="smoothscroll btn btn--stroke">
-                        Start a Project
+                    <a class="smoothscroll btn btn--stroke">
+                        Cadastre-se
                     </a>
-                    <a href="#about" class="smoothscroll btn btn--stroke">
-                        More About Us
+                    <a class="smoothscroll btn btn--stroke">
+                        Login
                     </a>
                 </div>
 
@@ -79,7 +80,7 @@
 
             <div class="home-content__scroll">
                 <a href="#about" class="scroll-link smoothscroll">
-                    <span>Scroll Down</span>
+                    <span>O que é AO</span>
                 </a>
             </div>
 
@@ -90,15 +91,14 @@
 
     <div class="row section-header has-bottom-sep" data-aos="fade-up">
         <div class="col-full">
-            <h3 class="subhead subhead--dark">Hello There</h3>
-            <h1 class="display-1 display-1--light">We Are Glint</h1>
+            <h1 class="display-1 display-1--light">Quem somos nós?</h1>
         </div>
     </div>
 
-    <div>
-        <div>
+    <div class="row about-desc" data-aos="fade-up">
+        <div class="col-full">
             <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.
+                AO significa mundos na língua Maori, o que representa muito bem a ideia dessa rede social. Ela é voltada em prol do meio ambiente, onde você se conectará com outras pessoas com a mesma ideia de preservação ambiental, conectando eu e você a um novo mundo.
             </p>
         </div>
     </div>
