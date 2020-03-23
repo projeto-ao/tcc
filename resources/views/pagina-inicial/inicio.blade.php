@@ -10,8 +10,6 @@
 @endsection
 
 @section('content')
-<body id="top">
-
     <header class="s-header">
 
         <div class="header-logo">
@@ -48,7 +46,7 @@
 
     </header>
 
-<section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('vendor/public/imagens/pagina-inicial/arvore1.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('vendor/public/imagens/pagina-inicial/arvore1.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
@@ -63,8 +61,6 @@
                     Bem vindo a uma <br>
                     rede social diferente <br>
                     de todas <br>
-                    {{-- AO é voltada em prol do <br>
-                    meio ambiente. --}}
                 </h1>
 
                 <div class="home-content__buttons">
@@ -102,14 +98,10 @@
             </p>
         </div>
     </div>
-    @endsection
+@endsection
 
-    @section('js')
-        <script src="{{ asset('vendor/public/js/jquery-3.4.1.min.js') }}"></script>
-        <script src="{{ asset('vendor/public/js/pagina-inicial/plugins.js') }}"></script>
-        <script src="{{ asset('vendor/public/js/pagina-inicial/main.js') }}"></script>
-    @endsection
-
-</body>
-
-</html>
+ @section('js')
+    <script src="{{ asset('vendor/public/js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('vendor/public/js/pagina-inicial/plugins.js') }}"></script>
+    <script src="{{ asset('vendor/public/js/pagina-inicial/main.js') }}"></script>
+@endsection
