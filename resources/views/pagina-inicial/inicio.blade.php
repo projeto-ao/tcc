@@ -3,10 +3,10 @@
 @section('title', 'Projeto AO')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('vendor/public/css/pagina-inicial/base.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/public/css/pagina-inicial/vendor.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/public/css/pagina-inicial/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('vendor/public/FontAwesome/css/fontawesome.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/base.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/vendor.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/FontAwesome/css/fontawesome.min.css') }}">
 @endsection
 
 @section('content')
@@ -100,8 +100,8 @@
     </div>
 @endsection
 
- @section('js')
-    <script src="{{ asset('vendor/public/js/jquery-3.4.1.min.js') }}"></script>
-    <script src="{{ asset('vendor/public/js/pagina-inicial/plugins.js') }}"></script>
-    <script src="{{ asset('vendor/public/js/pagina-inicial/main.js') }}"></script>
+@section('js')
+    <script src="{{ asset('/public/js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('/public/js/pagina-inicial/plugins.js') }}"></script>
+    <script src="{{ asset('/public/js/pagina-inicial/main.js') }}"></script>
 @endsection
