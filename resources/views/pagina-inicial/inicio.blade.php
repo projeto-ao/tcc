@@ -46,7 +46,7 @@
 
     </header>
 
-    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('vendor/public/imagens/pagina-inicial/arvore1.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
+    <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('public/imagens/pagina-inicial/arvores.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
         <div class="shadow-overlay"></div>
