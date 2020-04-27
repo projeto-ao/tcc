@@ -10,10 +10,11 @@ AO significa mundos na língua Maori, o que representa muito bem a ideia dessa r
 
 ## Documentações uteis
 
-**Laravel:** https://laravel.com/ <br/>
-**Composer:** https://getcomposer.org/ <br/>
+**Laravel:** https://laravel.com/docs/7.x <br/>
+**Composer:** https://getcomposer.org/doc/ <br/>
+**Docker:** https://docs.docker.com/ <br/>
 
-## Requesitos do sistema
+## Requesitos do sistema 
 
 PHP >= 7.3.5 <br/>
 PHP BCMath <br/>
@@ -26,3 +27,5 @@ PHP PDO <br/>
 PHP Tokenizer <br/>
 PHP XML <br/>
 Composer <br/>
+
+OBS: Recomendamos a utilização do Docker para a execução do projeto, afim de se evitar quaisquer erros com dependencias e requesitos.
