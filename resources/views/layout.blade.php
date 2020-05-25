@@ -15,21 +15,15 @@
                 </div>
 
                 <nav class="header-nav">
-                    <a href="#0" class="header-nav__close" title="close"><span>Close</span></a>
+                    <a href="#0" class="header-nav__close" title="close"><span>Fechar</span></a>
 
                     <div class="header-nav__content">
-                        <h3>Navigation</h3>
+                        <h3>Navegação</h3>
 
                         <ul class="header-nav__list">
-                            <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                            <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-                            <li><a class="smoothscroll"  href="#services" title="services">Services</a></li>
-                            <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
-                            <li><a class="smoothscroll"  href="#clients" title="clients">Clients</a></li>
-                            <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+                            <li class="current"><a href="{{ route('linha-do-tempo') }}" title="home">Início</a></li>
+                            <li><a href="{{ route('pagina-inicial') }}" title="about">Sobre nós</a></li>
                         </ul>
-
-                        <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
                     </div>
                </nav>
 
@@ -41,7 +35,11 @@
 
             @yield('content');
         </div>
-
-        @yield('js')
     </body>
+
+    <script src="{{ asset('/public/js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('/public/js/pagina-inicial/plugins.js') }}"></script>
+    <script src="{{ asset('/public/js/pagina-inicial/main.js') }}"></script>
+
+    @yield('js')
 </html>
