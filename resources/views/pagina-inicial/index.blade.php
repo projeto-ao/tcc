@@ -3,14 +3,17 @@
 @section('title', 'Projeto AO')
 
 @section('css')
-
+    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/base.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/vendor.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/main.css') }}">
+    <link rel="stylesheet" href="{{ asset('public/FontAwesome/css/fontawesome.min.css') }}">
 @endsection
 
 @section('content')
     <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('public/imagens/pagina-inicial/arvores.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
+        {{-- <div class="overlay"></div>
+        <div class="shadow-overlay"></div> --}}
 
         <div class="home-content">
 
@@ -62,4 +65,7 @@
 @endsection
 
 @section('js')
+    <script src="{{ asset('/public/js/jquery-3.4.1.min.js') }}"></script>
+    <script src="{{ asset('/public/js/pagina-inicial/plugins.js') }}"></script>
+    <script src="{{ asset('/public/js/pagina-inicial/main.js') }}"></script>
 @endsection
