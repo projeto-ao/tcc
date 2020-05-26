@@ -12,9 +12,6 @@
 @section('content')
     <section id="home" class="s-home target-section" data-parallax="scroll" data-image-src="{{ asset('public/imagens/pagina-inicial/arvores.jpg')}}" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-        {{-- <div class="overlay"></div>
-        <div class="shadow-overlay"></div> --}}
-
         <div class="home-content">
 
             <div class="row home-content__main">
