@@ -1,7 +1,14 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>@yield('title')</title>
+        <title>
+            @yield('title')
+        </title>
+
+        <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/vendor.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/main.css') }}">
+        <link rel="stylesheet" href="{{ asset('public/FontAwesome/css/fontawesome.min.css') }}">
 
         @yield('css')
     </head>
@@ -21,8 +28,8 @@
                         <h3>Navegação</h3>
 
                         <ul class="header-nav__list">
-                            <li class="current"><a href="{{ route('linha-do-tempo') }}" title="home">Início</a></li>
-                            <li><a href="{{ route('pagina-inicial') }}" title="about">Sobre nós</a></li>
+                            {{-- <li class="current"><a href="{{ route('linha-do-tempo') }}" title="home">Início</a></li> --}}
+                            {{-- <li><a href="{{ route('pagina-inicial') }}" title="about">Sobre nós</a></li> --}}
                         </ul>
                     </div>
                </nav>
@@ -32,9 +39,9 @@
                     <span class="header-menu-icon"></span>
                 </a>
             </header>
-
-            @yield('content');
         </div>
+
+        @yield('content');
     </body>
 
     <script src="{{ asset('/public/js/jquery-3.4.1.min.js') }}"></script>

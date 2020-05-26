@@ -3,10 +3,7 @@
 @section('title', 'Projeto AO')
 
 @section('css')
-    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/base.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/vendor.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/css/pagina-inicial/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('public/FontAwesome/css/fontawesome.min.css') }}">
+
 @endsection
 
 @section('content')
