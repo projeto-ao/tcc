@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('pagina-inicial.index');
 });
+
+Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
