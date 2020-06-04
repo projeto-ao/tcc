@@ -17,7 +17,8 @@
             }
 
             .menu-label {
-                font-size: 25px;
+                font-size: 1.5rem;
+                font-weight: bold;
                 color: #fff;
                 padding: 0.25em;
                 text-shadow: 1.5px 1.5px #000;
