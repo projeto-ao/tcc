@@ -11,13 +11,13 @@
 
         <style type="text/css" rel="stylesheet">
             .fa-align-center {
-                font-size: 30px;
+                font-size: 2.5rem;
                 color: #fff;
                 text-shadow: 1.5px 1.5px #000;
             }
 
             .menu-label {
-                font-size: 1.5rem;
+                font-size: 2.75rem;
                 font-weight: bold;
                 color: #fff;
                 padding: 0.25em;
