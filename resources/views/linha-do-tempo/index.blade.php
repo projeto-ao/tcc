@@ -3,16 +3,9 @@
 @section('title', 'Projeto AO')
 
 @section('css')
-<link type="text/css" rel="stylesheet" href="{{ asset('public/css/estilos.css') }}">
 @endsection
 
 @section('content')
-    <div class="container">
-        <div class="col-md-12 col-xs-10">
-
-        <div>
-    </div>
-
     <script type="text/template" id="template_postagem">
         <div class = "postagem">
             <div class = "nome-usuario">
