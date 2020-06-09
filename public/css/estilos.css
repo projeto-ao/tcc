@@ -1,3 +1,9 @@
+/*
+    ESTILOS HERDADOS DO ANTIGO ORBIS
+
+    Não modificar os estilos daqui, apenas sobreescreva o bloco de estilo no arquivo novosEstilos.css
+*/
+
 body{
     background-image: 'public/imagens/pagina-inicial/arvores.jpg';
 }
