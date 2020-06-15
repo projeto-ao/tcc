@@ -1,0 +1,88 @@
+/*
+  REGRAS CSS:
+
+    usar preferencialmente cores hexadecimais e sempre que possivel abreviadas (exemplo: #fff ao inves de #ffffff).
+    usar identação de 2 espaços.
+    nomes devem ser em portugues separados por hifen (exemplo: botao-menu).
+    colocar espaço depois de ':'.
+    colocar espaço antes de '{}'.
+    colocar um comentario sempre que o bloco de estilo não for intuitivo (exemplo na linha 66), marcando o fim do bloco não intuitivo com abertura e fechamento de comentário.
+    sempre colocar ';' no final de cada declaração.
+    sempre deixar uma linha em branco entre cada bloco de estilo.
+    evitar usar nomes de estilo padrões do Bootstrap.
+*/
+
+.sticky-menu {
+  top: 1rem;
+  right: 1rem;
+  position: absolute;
+  cursor: pointer;
+}
+
+.texto-postagem {
+  padding: 0.5rem;
+}
+
+.modal {
+  top: 2rem;
+  left: 2.5rem;
+}
+
+.texto-menu {
+  font-weight: bold;
+  font-size: 2rem;
+  background-color: transparent !important;
+  color: #fff !important;
+  text-shadow: 1.5px 1.5px #000;
+  text-align: right;
+  box-shadow: none;
+  border-radius: 1rem;
+}
+
+.dropdown-menu {
+  background-color: transparent !important;
+}
+
+.texto-menu:hover {
+  background-color: #fff !important;
+  color: #2E2E2E !important;
+  border-radius: 1rem;
+  text-shadow: none;
+}
+
+.postagem {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: none;
+}
+
+.botao-postagem {
+  color: #fff;
+  border-radius: 1rem;
+  font-size: 1rem;
+}
+
+.close {
+  font-size: 2.5rem;
+  color: #2E2E2E;
+}
+
+/*
+  configura a cor de exibição da textarea de nova publicação para usar
+  a mesma cor do Bootstrap btn-success
+*/
+
+.success-textarea textarea.md-textarea:focus:not([readonly]) {
+  border-bottom: 1px solid #00C851;
+  box-shadow: 0 1px 0 0 #00C851;
+}
+
+.active-success-textarea.md-form label.active {
+  color: #00C851;
+}
+
+.active-success-textarea.md-form textarea.md-textarea:focus:not([readonly])+label {
+  color: #00C851;
+}
+
+/**/

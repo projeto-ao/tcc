@@ -7,20 +7,22 @@
 
 @section('content')
     <script type="text/template" id="template_postagem">
-        <div class = "postagem">
-            <div class = "nome-usuario">
-            </div>
+        <div class="col-md-12">
+            <div class="postagem col-md-10">
+                <div class="nome-usuario">
+                </div>
 
-            <div class = "fonte-corpo">
-            </div>
+                <div class="fonte-corpo">
+                </div>
 
-            <div>
-                <a class = "fonte-botoes-corpo">
-                    <i class="fab fa-pagelines"></i> Gostei
-                </a>
-                <a class = "fonte-botoes-corpo">
-                    <i class="fas fa-bezier-curve"></i> Compartilhar
-                </a>
+                <div class="row col-md-10 botoes-interacao">
+                    <button class="btn btn-elegant botao-interacao col-md">
+                        <i class="fab fa-pagelines"></i> Gostei
+                    </button>
+                    <button class="btn btn-elegant botao-interacao col-md">
+                        <i class="fas fa-bezier-curve"></i> Compartilhar
+                    </button>
+                </div>
             </div>
         </div>
     </script>

@@ -5,57 +5,89 @@
             @yield('title')
         </title>
 
-        <script src="https://kit.fontawesome.com/5d32780e0c.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <!-- Google Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+        <!-- Bootstrap core CSS -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Material Design Bootstrap -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
+        <!-- Estilo herdado do Orbis -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/estilos.css') }}">
+        <!--
+            Estilos novos,
+            Sobreescrevem alguns dos estilos do bootstrap e dos estilos herdados
+        -->
+        <link type="text/css" rel="stylesheet" href="{{ asset('public/css/novosEstilos.css') }}">
 
         <style type="text/css" rel="stylesheet">
-            .fa-align-center {
-                font-size: 2.5rem;
-                color: #fff;
-                text-shadow: 1.5px 1.5px #000;
+            .fonte-botoes-corpo {
+                text-align: center;
             }
 
-            .menu-label {
-                font-size: 2.75rem;
+            .botao-interacao {
+                border-radius: 1rem;
+                font-size: 0.9rem;
                 font-weight: bold;
-                color: #fff;
-                padding: 0.25em;
-                text-shadow: 1.5px 1.5px #000;
             }
 
-            .sticky-top {
-                top: 1em;
-                right: 1em;
-                position: absolute;
-                cursor: pointer;
+            .botoes-interacao {
+                left: 5.2rem;
             }
+
         </style>
-
         @yield('css')
     </head>
 
     <body background="public/imagens/pagina-inicial/arvores.jpg">
         <div class="container">
-            <div class="sticky-top" id="menu">
-                <button class="btn btn-secundary dropdown-toggle" id="menu_dropdown" data-toggle="dropdown">
-                    <span class="menu-label">Menu</span><i class="fas fa-align-center white"></i>
+            <div class="sticky-top sticky-menu" id="menu">
+                <button class="btn texto-menu" id="menu_dropdown" data-toggle="dropdown">
+                    Menu <i class="fas fa-align-center"></i>
                 </button>
 
                 <div class="dropdown-menu dropdown-menu-right">
-                    <button class="dropdown-item">Item de exemplo 1</button>
-                    <button class="dropdown-item">Item de exemplo 2</button>
-                    <button class="dropdown-item">Item de exemplo 3</button>
+                    <button class="dropdown-item texto-menu" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">Novo <i class="fas fa-plus"></i></button>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item texto-menu" href="https://github.com/ghp2201/projeto-ao" target="_blank">Sobre <i class="fab fa-github"></i></a>
                 </div>
+            </div>
+
+            <div id="modal-nova-publicacao" class="modal">
+                <form class="postagem col-md-11 col-sm-12 col-xs-12">
+                    @csrf
+
+                    <div class="form-group texto-postagem col-md-12">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+
+                        <div class="md-form mb-4 success-textarea active-success-textarea">
+                            <textarea class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="500"></textarea>
+                        </div>
+                        <p></p>
+                        <div class="row">
+                            <button type="button" class="btn btn-elegant col-sm botao-postagem">Adicionar foto <i class="fas fa-paperclip"></i></button>
+                            <button type="button" class="btn btn-success col-sm botao-postagem botao-enviar">Enviar <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+
+                </form>
             </div>
 
             @yield('content')
         </div>
     </body>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <!-- Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
     @yield('js')
 </html>
