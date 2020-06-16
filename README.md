@@ -23,8 +23,9 @@ AO significa mundos na língua Maori, o que representa muito bem a ideia dessa r
 **5 -** Entrar no terminal do php com "docker-compose exec php bash" <br/>
 **5.1 -** Dentro do terminal do php executar o comando "cd .." para entrar na pasta /var/www <br/>
 **5.2 -** Instalar o composer com o comando "composer install", esse passo pode demorar <br/>
-**5.3 -** Executar as migrações com "php artisan migrate", pode ser que não haja nenhuma migração <br/>
-**5.4 -** Sair do terminal do php com o comando "exit" <br/>
+**5.3 -** Criar uma chave laravel com o comando "php artisan key>generate" <br/>
+**5.4 -** Executar as migrações com "php artisan migrate", pode ser que não haja nenhuma migração <br/>
+**5.5 -** Sair do terminal do php com o comando "exit" <br/>
 **6 -** Para executar o projeto no navegador use a url 'localhost'. <br/>
 
 ## Executando com Docker para windows
