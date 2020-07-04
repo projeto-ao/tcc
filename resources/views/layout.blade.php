@@ -41,6 +41,7 @@
     </head>
 
     <body background="public/imagens/pagina-inicial/arvores.jpg">
+        <div id="app">
         <div class="container">
             <div class="sticky-top sticky-menu" id="menu">
                 <button class="btn texto-menu" id="menu_dropdown" data-toggle="dropdown">
@@ -76,6 +77,7 @@
 
             @yield('content')
         </div>
+        </div>
     </body>
 
     <!-- JQuery -->
@@ -87,7 +89,7 @@
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
     <!-- Vue.js -->
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="{{ asset("public/js/app.js") }}"></script>
 
     @yield('js')
 </html>
