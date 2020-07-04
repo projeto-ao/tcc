@@ -30,6 +30,7 @@
                 border-radius: 1rem;
                 font-size: 0.9rem;
                 font-weight: bold;
+                height: 2.5rem;
             }
 
             .botoes-interacao {
