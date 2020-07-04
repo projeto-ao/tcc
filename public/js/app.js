@@ -1960,8 +1960,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({});
 
 /***/ }),
@@ -37563,31 +37561,29 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12" }, [
-      _c("div", { staticClass: "postagem col-md-10" }, [
-        _c("div", { staticClass: "nome-usuario" }),
+    return _c("div", { staticClass: "postagem col-md-10" }, [
+      _c("div", { staticClass: "nome-usuario" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "fonte-corpo" }),
+      _vm._v(" "),
+      _c("div", { staticClass: "row col-md-10 botoes-interacao" }, [
+        _c(
+          "button",
+          { staticClass: "btn btn-elegant botao-interacao col-md" },
+          [
+            _c("i", { staticClass: "fab fa-pagelines" }),
+            _vm._v(" Gostei\n        ")
+          ]
+        ),
         _vm._v(" "),
-        _c("div", { staticClass: "fonte-corpo" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "row col-md-10 botoes-interacao" }, [
-          _c(
-            "button",
-            { staticClass: "btn btn-elegant botao-interacao col-md" },
-            [
-              _c("i", { staticClass: "fab fa-pagelines" }),
-              _vm._v(" Gostei\n            ")
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            { staticClass: "btn btn-elegant botao-interacao col-md" },
-            [
-              _c("i", { staticClass: "fas fa-bezier-curve" }),
-              _vm._v(" Compartilhar\n            ")
-            ]
-          )
-        ])
+        _c(
+          "button",
+          { staticClass: "btn btn-elegant botao-interacao col-md" },
+          [
+            _c("i", { staticClass: "fas fa-bezier-curve" }),
+            _vm._v(" Compartilhar\n        ")
+          ]
+        )
       ])
     ])
   }

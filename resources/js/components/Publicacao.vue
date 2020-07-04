@@ -1,5 +1,4 @@
 <template>
-    <div class="col-md-12">
         <div class="postagem col-md-10">
             <div class="nome-usuario">
             </div>
@@ -16,7 +15,6 @@
                 </button>
             </div>
         </div>
-    </div>
 </template>
 
 <script>
