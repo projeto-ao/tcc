@@ -15,65 +15,50 @@
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
         <!-- Estilo herdado do Orbis -->
         <link type="text/css" rel="stylesheet" href="{{ asset('public/css/estilos.css') }}">
-        <!--
-            Estilos novos,
-            Sobreescrevem alguns dos estilos do bootstrap e dos estilos herdados
-        -->
+        <!-- Estilos novos, sobreescrevem alguns dos estilos herdados -->
         <link type="text/css" rel="stylesheet" href="{{ asset('public/css/novosEstilos.css') }}">
 
-        <style type="text/css" rel="stylesheet">
-            .fonte-botoes-corpo {
-                text-align: center;
-            }
-
-            .botao-interacao {
-                border-radius: 1rem;
-                font-size: 0.9rem;
-                font-weight: bold;
-                height: 2.5rem;
-            }
-
-            .botoes-interacao {
-                left: 5.2rem;
-            }
-
-        </style>
         @yield('css')
     </head>
 
     <body background="public/imagens/pagina-inicial/arvores.jpg">
         <div id="app">
-        <div class="container">
-            <div class="sticky-top sticky-menu" id="menu">
-                <button class="btn texto-menu" id="menu_dropdown" data-toggle="dropdown">
-                    Menu <i class="fas fa-align-center"></i>
+        <div class="container col-sm-12 col-md-12 col-xs-12">
+
+            <div class="col-md-2 offset-10 sticky-top">
+                <button class="btn menu-principal" data-toggle="dropdown">
+                    <span>Menu <i class="fas fa-align-center"></i></span>
                 </button>
 
-                <div class="dropdown-menu dropdown-menu-right">
-                    <button class="dropdown-item texto-menu" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">
+                <div class="dropdown-menu dropdown-menu-right menu-principal-dropdown">
+                    <button class="dropdown-item" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">
                         <span>Novo <i class="fas fa-plus"></i></span>
                     </button>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item texto-menu" href="https://github.com/ghp2201/projeto-ao" target="_blank">
+                    <a class="dropdown-item" href="https://github.com/ghp2201/projeto-ao" target="_blank">
                         <span>Sobre <i class="fab fa-github"></i></span>
                     </a>
                 </div>
             </div>
 
-            <div id="modal-nova-publicacao" class="modal">
-                <form class="postagem col-md-11 col-sm-12 col-xs-12">
+            <div id="modal-nova-publicacao" class="col-md-10 col-sm-10 col-xs-10 offset-1 modal modal-div">
+                <form class="modal-form">
                     @csrf
 
-                    <div class="form-group texto-postagem col-md-12">
+                    <div class="col-md-12 form-group">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
                         <div class="md-form mb-4 success-textarea active-success-textarea">
                             <textarea class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="500"></textarea>
                         </div>
-                        <p></p>
-                        <div class="row">
-                            <button type="button" class="btn btn-elegant col-sm botao-postagem">Adicionar foto <i class="fas fa-paperclip"></i></button>
-                            <button type="button" class="btn btn-success col-sm botao-postagem botao-enviar">Enviar <i class="fas fa-paper-plane"></i></button>
+
+                        <div class="row col-md-8 offset-2">
+                            <button type="button" class="col-sm btn btn-elegant botao-anexar">
+                                <span>Adicionar foto <i class="fas fa-paperclip"></i></span>
+                            </button>
+                            <button type="button" class="col-sm btn btn-elegant botao-enviar">
+                                <span>Enviar <i class="fas fa-paper-plane"></i></span>
+                            </button>
                         </div>
                     </div>
 
