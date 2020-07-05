@@ -1,11 +1,11 @@
 @extends('layouts.principal')
 
-@section('title', 'Projeto AO')
+@section('titulo', 'Projeto AO')
 
 @section('css')
 @endsection
 
-@section('content')
+@section('conteudo')
 @endsection
 
 @section('js')

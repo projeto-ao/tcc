@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <title>
-            @yield('title')
+            @yield('titulo')
         </title>
 
         <!-- Font Awesome -->
@@ -76,7 +76,7 @@
                 </form>
             </div>
 
-            @yield('content')
+            @yield('conteudo')
         </div>
         </div>
     </body>
