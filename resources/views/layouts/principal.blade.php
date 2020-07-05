@@ -50,9 +50,13 @@
                 </button>
 
                 <div class="dropdown-menu dropdown-menu-right">
-                    <button class="dropdown-item texto-menu" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">Novo <i class="fas fa-plus"></i></button>
+                    <button class="dropdown-item texto-menu" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">
+                        <span>Novo <i class="fas fa-plus"></i></span>
+                    </button>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item texto-menu" href="https://github.com/ghp2201/projeto-ao" target="_blank">Sobre <i class="fab fa-github"></i></a>
+                    <a class="dropdown-item texto-menu" href="https://github.com/ghp2201/projeto-ao" target="_blank">
+                        <span>Sobre <i class="fab fa-github"></i></span>
+                    </a>
                 </div>
             </div>
 
@@ -85,8 +89,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Bootstrap tooltips -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <!-- Bootstrap core JavaScript
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
     <!-- MDB core JavaScript -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
     <!-- Vue.js -->
