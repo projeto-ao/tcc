@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('layouts.principal')
 
 @section('title', 'Projeto AO')
 
