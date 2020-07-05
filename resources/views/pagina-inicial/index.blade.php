@@ -27,18 +27,18 @@
                     </h1>
 
                     <div class="home-content__buttons">
-                        <a class="smoothscroll btn btn--stroke">
+                        <a class="btn btn--stroke">
                             Cadastre-se
                         </a>
-                        <a class="smoothscroll btn btn--stroke">
-                            Login
-                        </a>
+                            <a class="btn btn--stroke">
+                                Login
+                            </a>
                     </div>
 
                 </div>
 
                 <div class="home-content__scroll">
-                    <a href="#about" class="scroll-link smoothscroll">
+                    <a href="#about" class="scroll-link">
                         <span>O que é AO</span>
                     </a>
                 </div>
@@ -54,13 +54,15 @@
             </div>
         </div>
 
-        <div class="row about-desc" data-aos="fade-up">
-            <div class="col-full">
-                <p>
-                    AO significa mundos na língua Maori, o que representa muito bem a ideia dessa rede social. Ela é voltada em prol do meio ambiente, onde você se conectará com outras pessoas com a mesma ideia de preservação ambiental, conectando eu e você a um novo mundo.
-                </p>
+        <section id="about">
+            <div class="row about-desc" data-aos="fade-up">
+                <div class="col-full">
+                    <p>
+                        AO significa mundos na língua Maori, o que representa muito bem a ideia dessa rede social. Ela é voltada em prol do meio ambiente, onde você se conectará com outras pessoas com a mesma ideia de preservação ambiental, conectando eu e você a um novo mundo.
+                    </p>
+                </div>
             </div>
-        </div>
+        </section>
     </body>
 
     <script src="{{ asset('/public/js/jquery-3.4.1.min.js') }}"></script>
