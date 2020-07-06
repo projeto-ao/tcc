@@ -1,7 +1,6 @@
 /*
-  Arquivo CSS principal
-  Evitar manter formatação de estilo aqui, apenas
-  importar os arquivos da pasta 'estilos/'
+  Arquivo CSS responsavel por fazer a importação
+  dos demais estilos da pasta estilos/*
 */
 
 @import "estilos/botoes.css";
