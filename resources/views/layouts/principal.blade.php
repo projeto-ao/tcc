@@ -5,17 +5,11 @@
             @yield('titulo')
         </title>
 
-        <!-- Font Awesome -->
+        <link rel="stylesheet" href="{{ asset("public/css/app.css") }}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-        <!-- Google Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-        <!-- Bootstrap core CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-        <!-- Material Design Bootstrap -->
         <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css" rel="stylesheet">
-        <!-- Estilo herdado do Orbis -->
         <link type="text/css" rel="stylesheet" href="{{ asset('public/css/estilos.css') }}">
-        <!-- Estilos novos, sobreescrevem alguns dos estilos herdados -->
         <link type="text/css" rel="stylesheet" href="{{ asset('public/css/novosEstilos.css') }}">
 
         @yield('css')
@@ -70,16 +64,8 @@
         </div>
     </body>
 
-    <!-- JQuery -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!-- Bootstrap tooltips -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-    <!-- Bootstrap core JavaScript
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
-    <!-- Vue.js -->
     <script src="{{ asset("public/js/app.js") }}"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
 
     @yield('js')
 </html>
