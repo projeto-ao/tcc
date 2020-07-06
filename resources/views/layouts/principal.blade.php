@@ -7,8 +7,8 @@
 
         <link rel="stylesheet" href="{{ asset("public/css/app.css") }}">
         <link rel="stylesheet" href="{{ asset("public/FontAwesome/css/all.min.css") }}">
+        <link rel="stylesheet" href="{{ asset("public/MDB-Free_4.19.1/css/mdb.min.css") }}">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/css/mdb.min.css">
         <link rel="stylesheet" href="{{ asset('public/css/importador.css') }}">
 
         @yield('css')
@@ -64,7 +64,7 @@
     </body>
 
     <script src="{{ asset("public/js/app.js") }}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.0/js/mdb.min.js"></script>
+    <script src="{{ asset("public/MDB-Free_4.19.1/js/mdb.min.js") }}"></script>
 
     @yield('js')
 </html>
