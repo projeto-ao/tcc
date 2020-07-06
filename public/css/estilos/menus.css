@@ -22,10 +22,10 @@
 }
 
 .menu-principal:hover {
-  color: #555 !important;
+  color: #00C851 !important;
 }
 
 .dropdown-item:hover {
   background-color: transparent !important;
-  color: #555 !important;
+  color: #00C851 !important;
 }
