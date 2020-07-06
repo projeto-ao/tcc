@@ -1,0 +1,32 @@
+/*
+  Estilos de Botões
+  Preferencialmente user o prefixo botao-*
+*/
+
+.botao-anexar {
+  color: #fff;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.6rem;
+  padding-top: 0.8rem;
+}
+
+.botao-enviar {
+  color: #fff;
+  border-radius: 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  height: 2.6rem;
+  padding-top: 0.8rem;
+  background-color: #00C851 !important;
+}
+
+.botao-interacao {
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  height: 2.2rem;
+  margin: 0.3rem;
+  padding-top: 0.6rem;
+}

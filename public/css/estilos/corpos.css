@@ -1,0 +1,23 @@
+/*
+  Estilos de formatação do 'corpo' do elemento HTML
+  Preferencialmente usar corpo-* ou nome_elemento-* como prefixos.
+  Ex: modal-*, corpo-*
+*/
+
+.modal-div {
+  top: 2rem;
+}
+
+.modal-form {
+  border-radius: 1rem;
+  border: none;
+  box-shadow: none;
+  margin: 0.25rem;
+  background-color: #fff;
+}
+
+.corpo-publicacao {
+  border-radius: 1rem;
+  margin: 0.5rem;
+  background-color: #fff;
+}

@@ -1,0 +1,31 @@
+/*
+  Estilos dos menus
+  Preferencialmente usar o prefixo menu-*
+*/
+.menu-principal {
+  font-weight: bold;
+  font-size: 1.75rem;
+  background-color: #fff !important;
+  color: #000 !important;
+  text-align: right;
+  border-radius: 1rem;
+  float: right;
+}
+
+.menu-principal-dropdown {
+  font-weight: bold;
+  font-size: 1.6rem;
+  background-color: #fff !important;
+  color: #000 !important;
+  text-align: right;
+  border-radius: 1rem;
+}
+
+.menu-principal:hover {
+  color: #555 !important;
+}
+
+.dropdown-item:hover {
+  background-color: transparent !important;
+  color: #555 !important;
+}

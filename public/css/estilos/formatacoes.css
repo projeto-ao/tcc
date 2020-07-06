@@ -1,0 +1,16 @@
+/*
+  Estilos de formatação de texto
+  Preferencialmente usar o prefixo texto-*
+*/
+
+.texto-nome-usuario {
+  font-size: 1.05rem;
+  font-weight: bold;
+  padding: 0.25rem;
+}
+
+.texto-publicacao {
+  font-size: 1rem;
+  padding: 0.25rem;
+  text-align: justify;
+}

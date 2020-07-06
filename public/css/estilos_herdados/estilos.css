@@ -1,0 +1,113 @@
+/*
+    ESTILOS HERDADOS DO ANTIGO ORBIS
+
+    Não modificar os estilos daqui, apenas sobreescreva o bloco de estilo no arquivo novosEstilos.css
+*/
+
+/* body{
+    background-image: 'public/imagens/pagina-inicial/arvores.jpg';
+} */
+.menu{
+    position: fixed;
+    width: 75px;
+    right: 2%;
+    top: 105px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 0.01px #d3d3d3;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.menu-perfil{
+    position: fixed;
+    height: 85px;
+    width: 85px;
+    right: 1.75%;
+    top: 10px;
+    background-color: #fff;
+    border-radius: 90px;
+    box-shadow: 2px 2px 2px 0.01px #d3d3d3;
+}
+.botoes-menu{
+    width: 48px;
+    height: 48px;
+}
+.foto-perfil-menu{
+    margin-top: 18px;
+    margin-left: 18px;;
+    vertical-align: middle;
+    text-align: center;
+}
+.corpo{
+    position: absolute;
+    right: 10%;
+    left: 10%;
+    top: 10px;
+    bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 0.01px #d3d3d3;
+    background-color: #fff;
+}
+/* .fonte-corpo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    color: #000;
+    text-decoration-line: none;
+    text-decoration: none;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+} */
+.fonte-botoes-corpo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #adadad;
+    text-decoration-line: none;
+    text-decoration: none;
+}
+.icone-botoes-corpo{
+    width: 24px;
+    height: 24px;
+    margin-left: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+}
+/* .postagem{
+    width: auto;
+    height: auto;
+    position: absolute;
+    left: 1%;
+    right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border: 0.5px solid #d3d3d3;
+    border-radius: 15px;
+    box-shadow: 1px 1px 1px 0.01px #d3d3d3;
+    background-color: #fff;
+} */
+/* .nome-usuario{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: bold;
+    color: #000;
+    text-decoration-line: none;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px 0.01px #d3d3d3;
+    margin-top: 30px;
+    margin-left: 100px;
+    margin-right: 10px;
+} */
+.foto-usuario{
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    margin-top: 15px;
+    margin-left: 15px;
+    border-radius: 90px;
+    box-shadow: 1px 1px 1px 0.01px #d3d3d3;
+    text-align: center;
+}
