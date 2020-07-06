@@ -28,7 +28,7 @@
                         <span>Novo <i class="fas fa-plus"></i></span>
                     </button>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="https://github.com/ghp2201/projeto-ao" target="_blank">
+                    <a class="dropdown-item" href="https://github.com/projeto-ao/projeto-ao" target="_blank">
                         <span>Sobre <i class="fab fa-github"></i></span>
                     </a>
                 </div>
