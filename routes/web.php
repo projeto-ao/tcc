@@ -18,3 +18,6 @@ Route::get('/', function () {
 });
 
 Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
