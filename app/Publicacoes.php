@@ -12,8 +12,10 @@ class Publicacoes extends Model
      * @var array
      */
     protected $fillable = [
-        'criador',
+        'id_criador',
+        'nome_criador'
         'conteudo',
+        'curtidas',
     ];
 
 }
