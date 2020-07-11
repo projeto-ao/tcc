@@ -18,6 +18,7 @@
         <div id="app">
         <div class="container col-sm-12 col-md-12 col-xs-12">
 
+            @if(Auth::check())
             <div class="col-md-2 offset-10 sticky-top">
                 <button class="btn menu-principal" data-toggle="dropdown">
                     <span>Menu <i class="fas fa-align-center"></i></span>
@@ -33,6 +34,7 @@
                     </a>
                 </div>
             </div>
+            @endif
 
             <div id="modal-nova-publicacao" class="col-md-10 col-sm-10 col-xs-10 offset-1 modal modal-div">
                 <form class="modal-form">

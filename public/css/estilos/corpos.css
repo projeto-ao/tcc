@@ -21,3 +21,17 @@
   margin: 0.5rem;
   background-color: #fff;
 }
+
+/* Card refere-se a um estilo do laravel/ui */
+.card {
+  border-radius: 1rem;
+  top: 1rem;
+}
+
+.card-header {
+  background-color: #fff;
+  border-top-left-radius: 1rem !important;
+  border-top-right-radius: 1rem !important;
+  font-size: 1.15rem;
+  font-weight: bold;
+}

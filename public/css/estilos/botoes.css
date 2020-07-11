@@ -30,3 +30,12 @@
   margin: 0.3rem;
   padding-top: 0.6rem;
 }
+
+.botao-auth {
+  border-radius: 1rem;
+  font-size: 0.8rem;
+  font-weight: bold;
+  height: 2.2rem;
+  margin: 0.3rem;
+  padding-top: 0.6rem;
+}
