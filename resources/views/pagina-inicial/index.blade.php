@@ -17,12 +17,12 @@
             </h1>
 
             <div class="home-content__buttons">
-                <a class="btn btn--stroke">
+                <a class="btn btn--stroke" href="/register">
                     Cadastre-se
                 </a>
-                    <a class="btn btn--stroke">
-                        Login
-                    </a>
+                <a class="btn btn--stroke" href="/login">
+                    Entrar
+                </a>
             </div>
         </div>
         <div class="home-content__scroll">
