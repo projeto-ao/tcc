@@ -18,6 +18,9 @@ Route::get('/', function () {
 });
 
 Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
+
+Route::post('/nova-publicacao', 'Publicacoes@novaPublicacao')->name('nova-publicacao');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

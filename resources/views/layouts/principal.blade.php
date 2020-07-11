@@ -37,21 +37,21 @@
             @endif
 
             <div id="modal-nova-publicacao" class="col-md-10 col-sm-10 col-xs-10 offset-1 modal modal-div">
-                <form class="modal-form">
+                <form class="modal-form" method="POST" action="{{ route('nova-publicacao') }}">
                     @csrf
 
                     <div class="col-md-12 form-group">
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
 
                         <div class="md-form mb-4 success-textarea active-success-textarea">
-                            <textarea class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="500"></textarea>
+                            <textarea id="texto" name="conteudo" class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="255" required></textarea>
                         </div>
 
                         <div class="row col-md-8 offset-2">
                             <button type="button" class="col-sm btn btn-elegant botao-anexar">
                                 <span>Adicionar foto <i class="fas fa-paperclip"></i></span>
                             </button>
-                            <button type="button" class="col-sm btn btn-elegant botao-enviar">
+                            <button type="submit" class="col-sm btn btn-elegant botao-enviar">
                                 <span>Enviar <i class="fas fa-paper-plane"></i></span>
                             </button>
                         </div>
