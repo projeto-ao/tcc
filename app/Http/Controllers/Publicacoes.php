@@ -20,7 +20,8 @@ class Publicacoes extends Controller
         try {
             DB::beginTransaction();
 
-            $publicacao->criador = $usuario->id;
+            $publicacao->id_criador = $usuario->id;
+            $publicacao->nome_criador = $usuario->name;
             $publicacao->conteudo = $request->input('conteudo');
 
             $publicacao->save();

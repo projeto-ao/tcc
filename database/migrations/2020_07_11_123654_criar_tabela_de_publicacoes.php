@@ -15,12 +15,14 @@ class CriarTabelaDePublicacoes extends Migration
     {
         Schema::create('publicacoes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('criador');
+            $table->foreignId('id_criador');
+            $table->string('nome_criador');
             $table->text('conteudo');
+            $table->integer('curtidas')->default(0);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->foreign('criador')->references('id')->on('users');
+            $table->foreign('id_criador')->references('id')->on('users');
         });
     }
 
