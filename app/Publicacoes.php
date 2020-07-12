@@ -13,7 +13,7 @@ class Publicacoes extends Model
      */
     protected $fillable = [
         'id_criador',
-        'nome_criador'
+        'nome_criador',
         'conteudo',
         'curtidas',
     ];
