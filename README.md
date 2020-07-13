@@ -1,7 +1,7 @@
 # Projeto AO
 
 Trabalho de conclusão de curso, realizado na ETEC Dep. Salim Sedeh, Leme-SP no ano de 2020. <br/>
-Desenvolvido por Gustavo Henrique Pinto e Thayná Alves de Sousa. <br/>
+Desenvolvido por Gustavo Henrique Pinto (@ghp2201) e Thayná Alves de Sousa. <br/>
 
 ## O que é AO?
 
