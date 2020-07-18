@@ -12,6 +12,6 @@ AO significa mundos na língua Maori, o que representa muito bem a ideia dessa r
 **OBS:** Para uma melhor visualização dos arquivos é recomendado que eles sejam abertos pelo próprio Github.
 
 **Docker**: seguir instruções do arquivo Intrucoes-Docker.md <br/>
-**Xampp**: seguir instruções do arquivo Intrucoes-Xampp.md <br/>
+**XAMPP**: seguir instruções do arquivo Intrucoes-Xampp.md <br/>
 
 
