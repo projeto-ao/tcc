@@ -17,10 +17,10 @@
             </h1>
 
             <div class="home-content__buttons">
-                <a class="btn btn--stroke" href="/register">
+                <a class="btn btn--stroke" href="{{ route('register') }}">
                     Cadastre-se
                 </a>
-                <a class="btn btn--stroke" href="/login">
+                <a class="btn btn--stroke" href="{{ route('login') }}">
                     Entrar
                 </a>
             </div>
