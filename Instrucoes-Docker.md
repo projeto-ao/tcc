@@ -1,6 +1,6 @@
 ### Instalando Docker e preparação básica do projeto
 
-**1 -** Baixar e instalar o Docker e o Node.js <br/>
+**1 -** Baixar e instalar o Docker e o Node.js (links no final do arquivo)<br/>
 **2 -** Clonar o repositório em uma pasta qualquer com **git clone https://github.com/projeto-ao/projeto-ao.git** <br/>
 **3 -** Copiar o arquivo **.env.example-docker** e renomear como **.env**, mantendo ele na raiz do projeto <br/>
 **4 -** Abrir o terminal na pasta raiz do projeto <br/>
@@ -22,3 +22,7 @@
 **3 -** Iniciar o Docker e executar com **docker-compose up -d** <br/>
 **4 -** Executar o projeto a partir do navegador com a url **localhost/** <br/>
 
+## Links para Download
+
+**Docker:** https://www.docker.com/get-started <br/>
+**Node.js:** https://nodejs.org/en/ <br/>
