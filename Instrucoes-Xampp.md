@@ -1,6 +1,10 @@
 ### Instalando XAMPP e preparação básica do projeto
 
-**1 -** Baixar e instalar **nessa ordem**: o XAMPP, o Composer e o Node.js (links no final do arquivo) <br/>
+**1 -** Baixar e instalar nessa ordem: <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; **1º:** XAMPP; <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; **2º:** Composer ; <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; **3º:** Node.js. <br/>
+&nbsp; &nbsp; &nbsp; &nbsp; (links no final do arquivo) <br/>
 **2 -** Clonar o repositório na pasta xampp/htdocs/ com **git clone https://github.com/projeto-ao/projeto-ao.git** <br/>
 **3 -** Copiar o arquivo **.env.example-xampp** e renomear como **.env**, mantendo ele na raiz do projeto <br/>
 **4 -** Iniciar a interface do XAMPP e inciar os módulos **Apache** e **MySQL** <br/>
