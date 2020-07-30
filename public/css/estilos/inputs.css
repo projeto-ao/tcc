@@ -5,23 +5,23 @@
 */
 
 .success-textarea textarea.md-textarea:focus:not([readonly]) {
-  border-bottom: 1px solid #00C851;
-  box-shadow: 0 1px 0 0 #00C851;
+  border-bottom: 1px solid var(--cor-de-destaque);
+  box-shadow: 0 1px 0 0 var(--cor-de-destaque);
 }
 
 .active-success-textarea.md-form label.active {
-  color: #00C851;
+  color: var(--cor-de-destaque);
 }
 
 .active-success-textarea.md-form textarea.md-textarea:focus:not([readonly])+label {
-  color: #00C851;
+  color: var(--cor-de-destaque);
 }
 
 .md-form input:focus:not([readonly]) {
-  box-shadow: 0 1px 0 0 #00C851 !important;
-  border-bottom: 1px solid #00C851 !important;
+  box-shadow: 0 1px 0 0 var(--cor-de-destaque) !important;
+  border-bottom: 1px solid var(--cor-de-destaque) !important;
 }
 
 .md-form input:focus:not([readonly]) + label {
-  color: #00C851 !important;
+  color: var(--cor-de-destaque) !important;
 }

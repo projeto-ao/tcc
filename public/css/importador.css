@@ -1,7 +1,9 @@
 /*
-  Arquivo CSS responsavel por fazer a importação
-  dos demais estilos da pasta estilos/*
+  Arquivo CSS responsavel por fazer a importação das variaveis
+  e dos demais estilos da pasta estilos/*
 */
+
+@import "variaveis.css";
 
 @import "estilos/botoes.css";
 @import "estilos/corpos.css";

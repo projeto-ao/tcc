@@ -2,11 +2,12 @@
   Estilos dos menus
   Preferencialmente usar o prefixo menu-*
 */
+
 .menu-principal {
   font-weight: bold;
   font-size: 1.75rem;
-  background-color: #fff !important;
-  color: #000 !important;
+  background-color: var(--cor-do-corpo) !important;
+  color: var(--cor-texto-geral) !important;
   text-align: right;
   border-radius: 1rem;
   float: right;
@@ -15,17 +16,21 @@
 .menu-principal-dropdown {
   font-weight: bold;
   font-size: 1.6rem;
-  background-color: #fff !important;
-  color: #000 !important;
+  background-color: var(--cor-do-corpo) !important;
   text-align: right;
   border-radius: 1rem;
 }
 
 .menu-principal:hover {
-  color: #00C851 !important;
+  color: var(--cor-de-destaque) !important;
+}
+
+/* dropdown-item se refere a um estilo do Bootstrap */
+.dropdown-item {
+  color: var(--cor-texto-geral) !important;
 }
 
 .dropdown-item:hover {
   background-color: transparent !important;
-  color: #00C851 !important;
+  color: var(--cor-de-destaque) !important;
 }

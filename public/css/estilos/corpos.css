@@ -13,23 +13,23 @@
   border: none;
   box-shadow: none;
   margin: 0.25rem;
-  background-color: #fff;
+  background-color: var(--cor-do-corpo);
 }
 
 .corpo-publicacao {
   border-radius: 1rem;
   margin: 0.5rem;
-  background-color: #fff;
+  background-color: var(--cor-do-corpo);
 }
 
-/* Card refere-se a um estilo do laravel/ui */
+/* card e card-header referem-se a estilos do Laravel/ui */
 .card {
   border-radius: 1rem;
   top: 1rem;
 }
 
 .card-header {
-  background-color: #fff;
+  background-color: var(--cor-do-corpo);
   border-top-left-radius: 1rem !important;
   border-top-right-radius: 1rem !important;
   font-size: 1.15rem;

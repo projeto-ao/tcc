@@ -4,7 +4,7 @@
 */
 
 .botao-anexar {
-  color: #fff;
+  color: var(--cor-texto-botoes);
   border-radius: 1.5rem;
   font-size: 1rem;
   font-weight: bold;
@@ -13,13 +13,13 @@
 }
 
 .botao-enviar {
-  color: #fff;
+  color: var(--cor-texto-botoes);
   border-radius: 1.5rem;
   font-size: 1rem;
   font-weight: bold;
   height: 2.6rem;
   padding-top: 0.8rem;
-  background-color: #00C851 !important;
+  background-color: var(--cor-de-destaque) !important;
 }
 
 .botao-interacao {
