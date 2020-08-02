@@ -6,6 +6,7 @@
 @endsection
 
 @section('conteudo')
+<lista-publicacoes :publicacoes='{{ $publicacoes }}'/>
 @endsection
 
 @section('js')
