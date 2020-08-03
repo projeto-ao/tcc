@@ -26,9 +26,10 @@
   border-radius: 1rem;
   font-size: 0.8rem;
   font-weight: bold;
-  height: 2.2rem;
-  margin: 0.3rem;
-  padding-top: 0.6rem;
+  max-height: 3rem;
+  margin-top: 0.65rem;
+  margin-bottom: 0.65rem;
+  padding: 0.4rem;
 }
 
 .botao-auth {

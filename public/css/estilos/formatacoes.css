@@ -14,3 +14,14 @@
   padding: 0.25rem;
   text-align: justify;
 }
+
+/* Configura exibição dos textos em plataformas mobile */
+.ocultar-em-mobile {
+  display: inline;
+}
+
+@media (max-width: 480px) {
+  .ocultar-em-mobile {
+    display: none;
+  }
+}
