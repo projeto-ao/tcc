@@ -34,7 +34,7 @@ class CriarTabelaDePublicacoes extends Migration
     public function down()
     {
         Schema::table('publicacoes', function (Blueprint $table) {
-            $table->dropForeign(['criador']);
+            $table->dropForeign(['id_criador']);
         });
 
         Schema::dropIfExists('publicacoes');
