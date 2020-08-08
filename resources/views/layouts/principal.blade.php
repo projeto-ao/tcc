@@ -42,8 +42,6 @@
           @csrf
 
           <div class="col-md-12 form-group">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-
             <div class="md-form mb-4 success-textarea active-success-textarea">
               <textarea id="texto" name="conteudo" class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="255" required></textarea>
             </div>
