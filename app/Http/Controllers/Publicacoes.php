@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\DB;
 
 class Publicacoes extends Controller
 {
+    private $mensagemDeErro = "Pedimos desculpas, mas ocorreu algo de errado com nosso servidor, por favor descreva esse erro por email para ghp2201@gmail.com ou abra uma issue em nosso Github, agradeçemos pela compreensão. Atenciosamente Equipe AO.";
+
     public function nova(Request $request)
     {
         $usuario = \Auth::user();
@@ -29,6 +31,8 @@ class Publicacoes extends Controller
             DB::commit();
         } catch(\Exception $e) {
             Log::error($e);
+
+            return $this->mensagemDeErro;
         }
 
         return redirect('linha-do-tempo');
