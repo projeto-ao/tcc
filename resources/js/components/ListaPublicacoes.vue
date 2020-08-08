@@ -1,6 +1,8 @@
 <template>
     <div class="col-md-8 offset-md-2">
-        <div v-for="publicacao in publicacoes.slice().reverse()" :key="publicacao.id">
+        <div v-for="publicacao in publicacoes.slice().reverse()"
+            :key="publicacao.id"
+        >
         <div class="corpo-publicacao">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="texto-nome-usuario">
@@ -13,7 +15,10 @@
             </div>
 
             <div class="row col-md-8 offset-md-2">
-                <button class="col-md btn btn-elegant botao-interacao">
+                <button class="col-md btn btn-elegant botao-interacao"
+                    @click="curtir(publicacao)"
+                    :id="'curtir-pub-' + publicacao.id"
+                >
                     <i class="fab fa-pagelines"></i> Gostei
                 </button>
                 <button class="col-md btn btn-elegant botao-interacao">
@@ -28,6 +33,17 @@
 <script>
     export default {
         props: ['publicacoes'],
+        methods: {
+            curtir(publicacao) {
+                $.ajax({
+                    url: './curtir/' + publicacao.id,
+                    method: 'GET',
+                    error: function() {
+                        alert(mensagemDeErro);
+                    }
+                });
+            }
+        }
     }
 </script>
 

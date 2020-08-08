@@ -19,7 +19,8 @@ Route::get('/', function () {
 
 Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
 
-Route::post('/nova-publicacao', 'Publicacoes@novaPublicacao')->name('nova-publicacao');
+Route::post('/nova-publicacao', 'Publicacoes@nova')->name('nova-publicacao');
+Route::get('/curtir/{id}', 'Publicacoes@curtir');
 
 Auth::routes();
 

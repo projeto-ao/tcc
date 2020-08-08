@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 
 class Publicacoes extends Controller
 {
-    public function novaPublicacao(Request $request)
+    public function nova(Request $request)
     {
         $usuario = \Auth::user();
 
@@ -32,5 +32,23 @@ class Publicacoes extends Controller
         }
 
         return redirect('linha-do-tempo');
+    }
+
+    public function curtir($idPublicacao)
+    {
+        $usuario = \Auth::user();
+
+        $publicacao = ModelPublicacoes::where('id', $idPublicacao)->first();
+
+        try {
+            DB::beginTransaction();
+
+            $publicacao->curtidas += 1;
+            $publicacao->save();
+
+            DB::commit();
+        } catch(\Exception $e) {
+            Log::error($e);
+        }
     }
 }

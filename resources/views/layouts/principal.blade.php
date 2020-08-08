@@ -66,5 +66,9 @@
   <script src="{{ asset("public/js/app.js") }}"></script>
   <script src="{{ asset("public/MDB-Free_4.19.1/js/mdb.min.js") }}"></script>
 
+  <script type="text/javascript">
+    var mensagemDeErro = 'Pedimos desculpas, mas ocorreu algo de errado, por favor descreva esse erro por email para "ghp2201@gmail.com" ou abra uma issue em nosso Github, agradeçemos pela compreensão. \r\n ~ Equipe AO.'
+  </script>
+
   @yield('js')
 </html>
