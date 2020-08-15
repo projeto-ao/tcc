@@ -19,7 +19,6 @@
   font-weight: bold;
   height: 2.6rem;
   padding-top: 0.8rem;
-  background-color: var(--cor-de-destaque) !important;
 }
 
 .botao-interacao {
@@ -39,4 +38,10 @@
   height: 2.2rem;
   margin: 0.3rem;
   padding-top: 0.6rem;
+}
+
+.botao-enviar:hover,
+.botao-anexar:hover,
+.botao-interacao:hover {
+  background-color: var(--cor-de-destaque) !important;
 }
