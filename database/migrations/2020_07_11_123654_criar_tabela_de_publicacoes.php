@@ -19,6 +19,9 @@ class CriarTabelaDePublicacoes extends Migration
             $table->string('nome_criador');
             $table->text('conteudo');
             $table->integer('curtidas')->default(0);
+            $table->integer('compartilhamentos')->default(0);
+            $table->integer('id_publicacao_original')->nullable();
+            $table->string('nome_compartilhador')->nullable();
             $table->timestamps();
             $table->softDeletes();
 

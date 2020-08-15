@@ -21,6 +21,12 @@
                         </button>
                     </div>
 
+                    <template v-if="publicacao.nome_compartilhador">
+                        {{ publicacao.nome_compartilhador }}
+                        <span class="texto-compartilhamento">
+                            compartilhou uma publicação de
+                        </span>
+                    </template>
                     {{ publicacao.nome_criador }}
                 </div>
 
@@ -38,7 +44,12 @@
                     </span>
                     <i class="fab fa-pagelines"></i> Gostei
                 </button>
-                <button class="col-md btn btn-elegant botao-interacao">
+                <button class="col-md btn btn-elegant botao-interacao"
+                    @click="compartilhar(publicacao.id)"
+                >
+                    <span :id="'compartilhamentos-' + publicacao.id">
+                        {{ publicacao.compartilhamentos }}
+                    </span>
                     <i class="fas fa-bezier-curve"></i> Compartilhar
                 </button>
             </div>
@@ -58,7 +69,7 @@
                     success: function() {
                         let pub = document.getElementById("publicacao-" + id);
 
-                        return pub.innerHTML = ""
+                        pub.innerHTML = "";
                     },
                     error: function() {
                         alert(mensagemDeErro);
@@ -79,6 +90,23 @@
                         alert(mensagemDeErro);
                     }
                 });
+            },
+            compartilhar(id) {
+                $.ajax({
+                    url: './compartilhar/' + id,
+                    method: 'GET',
+                    success: function() {
+                        let span = document.getElementById("compartilhamentos-" + id),
+                            compartilhamentos = Number(span.innerHTML) + 1;
+
+                        span.innerHTML = (compartilhamentos);
+                        // Procurar uma maneira de se livrar do reload dps
+                        location.reload();
+                    },
+                    error: function() {
+                        alert(mensagemDeErro);
+                    }
+                })
             }
         }
     }

@@ -60,14 +60,54 @@ class Publicacoes extends Controller
     {
         $publicacao = ModelPublicacoes::where('id', $idPublicacao)->first();
 
+        if ($publicacao->compartilhamentos > 0) {
+            $publicacoesFilhas = ModelPublicacoes::where('id_publicacao_original', $idPublicacao)->get();
+        }
+
         try {
             DB::beginTransaction();
+
+            if (isset($publicacoesFilhas)) {
+                foreach($publicacoesFilhas as $publicacaoFilha) {
+                    $publicacaoFilha->delete();
+                }
+            }
 
             $publicacao->delete();
 
             DB::commit();
         } catch(\Exception $e) {
             Log::error($e);
+        }
+    }
+
+    public function compartilhar($idPublicacao)
+    {
+        $usuario = \Auth::user();
+
+        $publicacaoOriginal = ModelPublicacoes::where('id', $idPublicacao)
+            ->first();
+        $novaPublicacao = new ModelPublicacoes();
+
+        try {
+            DB::beginTransaction();
+
+            $publicacaoOriginal->compartilhamentos += 1;
+
+            $novaPublicacao->id_criador = $usuario->id;
+            $novaPublicacao->nome_criador = $publicacaoOriginal->nome_criador;
+            $novaPublicacao->conteudo = $publicacaoOriginal->conteudo;
+            $novaPublicacao->id_publicacao_original = $publicacaoOriginal->id;
+            $novaPublicacao->nome_compartilhador = $usuario->name;
+
+            $publicacaoOriginal->save();
+            $novaPublicacao->save();
+
+            DB::commit();
+        } catch(\Exception $e) {
+            Log::error($e);
+
+            return $this->mensagemDeErro;
         }
     }
 }
