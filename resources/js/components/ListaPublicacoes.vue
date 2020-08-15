@@ -6,6 +6,18 @@
         <div class="corpo-publicacao">
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="texto-nome-usuario">
+                    <a class="menu-opcoes-publicacao"
+                        data-toggle="dropdown"
+                        v-show="publicacao.id_criador == usuario"
+                    >
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-left">
+                        <button class="dropdown-item atencao">
+                            <i class="fas fa-trash"></i> Excluir publicação
+                        </button>
+                    </div>
+
                     {{ publicacao.nome_criador }}
                 </div>
 
@@ -34,7 +46,7 @@
 
 <script>
     export default {
-        props: ['publicacoes'],
+        props: ['publicacoes', 'usuario'],
         methods: {
             curtir(id) {
                 $.ajax({

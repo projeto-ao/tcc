@@ -25,12 +25,22 @@
   color: var(--cor-de-destaque) !important;
 }
 
+.menu-opcoes-publicacao {
+  color: #bdc3c7 !important;
+  font-size: 1rem;
+}
+
 /* dropdown-item se refere a um estilo do Bootstrap */
 .dropdown-item {
   color: var(--cor-texto-geral) !important;
 }
 
+.menu-opcoes-publicacao:hover,
 .dropdown-item:hover {
   background-color: transparent !important;
   color: var(--cor-de-destaque) !important;
+}
+
+.dropdown-item.atencao:hover {
+  color: var(--cor-de-aviso) !important;
 }
