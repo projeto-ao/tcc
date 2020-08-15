@@ -16,9 +16,11 @@
 
             <div class="row col-md-8 offset-md-2">
                 <button class="col-md btn btn-elegant botao-interacao"
-                    @click="curtir(publicacao)"
-                    :id="'curtir-pub-' + publicacao.id"
+                    @click="curtir(publicacao.id)"
                 >
+                    <span :id="'curtidas-' + publicacao.id">
+                        {{ publicacao.curtidas }}
+                    </span>
                     <i class="fab fa-pagelines"></i> Gostei
                 </button>
                 <button class="col-md btn btn-elegant botao-interacao">
@@ -34,10 +36,16 @@
     export default {
         props: ['publicacoes'],
         methods: {
-            curtir(publicacao) {
+            curtir(id) {
                 $.ajax({
-                    url: './curtir/' + publicacao.id,
+                    url: './curtir/' + id,
                     method: 'GET',
+                    success: function() {
+                        let span = document.getElementById("curtidas-" + id),
+                            curtidas = Number(span.innerHTML) + 1;
+
+                        return span.innerHTML = (curtidas);
+                    },
                     error: function() {
                         alert(mensagemDeErro);
                     }
