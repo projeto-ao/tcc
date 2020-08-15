@@ -21,6 +21,7 @@ Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
 
 Route::post('/nova-publicacao', 'Publicacoes@nova')->name('nova-publicacao');
 Route::get('/curtir/{id}', 'Publicacoes@curtir');
+Route::get('/apagar/{id}', 'Publicacoes@apagar');
 
 Auth::routes();
 

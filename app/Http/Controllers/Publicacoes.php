@@ -55,4 +55,19 @@ class Publicacoes extends Controller
             Log::error($e);
         }
     }
+
+    public function apagar($idPublicacao)
+    {
+        $publicacao = ModelPublicacoes::where('id', $idPublicacao)->first();
+
+        try {
+            DB::beginTransaction();
+
+            $publicacao->delete();
+
+            DB::commit();
+        } catch(\Exception $e) {
+            Log::error($e);
+        }
+    }
 }

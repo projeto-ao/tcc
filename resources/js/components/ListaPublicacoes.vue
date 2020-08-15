@@ -2,6 +2,7 @@
     <div class="col-md-8 offset-md-2">
         <div v-for="publicacao in publicacoes.slice().reverse()"
             :key="publicacao.id"
+            :id="'publicacao-' + publicacao.id"
         >
         <div class="corpo-publicacao">
             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -13,8 +14,10 @@
                         <i class="fas fa-ellipsis-h"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-left">
-                        <button class="dropdown-item atencao">
-                            <i class="fas fa-trash"></i> Excluir publicação
+                        <button class="dropdown-item atencao"
+                            @click="apagar(publicacao.id)"
+                        >
+                            <i class="fas fa-trash"></i> Apagar publicação
                         </button>
                     </div>
 
@@ -48,6 +51,20 @@
     export default {
         props: ['publicacoes', 'usuario'],
         methods: {
+            apagar(id) {
+                $.ajax({
+                    url: './apagar/' + id,
+                    method: 'GET',
+                    success: function() {
+                        let pub = document.getElementById("publicacao-" + id);
+
+                        return pub.innerHTML = ""
+                    },
+                    error: function() {
+                        alert(mensagemDeErro);
+                    }
+                })
+            },
             curtir(id) {
                 $.ajax({
                     url: './curtir/' + id,
