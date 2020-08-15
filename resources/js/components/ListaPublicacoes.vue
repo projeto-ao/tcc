@@ -63,52 +63,66 @@
         props: ['publicacoes', 'usuario'],
         methods: {
             apagar(id) {
-                $.ajax({
-                    url: './apagar/' + id,
-                    method: 'GET',
-                    success: function() {
-                        let pub = document.getElementById("publicacao-" + id);
-
-                        pub.innerHTML = "";
-                    },
-                    error: function() {
-                        alert(mensagemDeErro);
-                    }
-                })
+                fazerRequisicaoAjax({
+                    idPublicacao: id,
+                    idElemento: "publicacao-" + id,
+                    requisicao: 'apagar',
+                    acrescer: false,
+                    recarregar: false
+                });
             },
             curtir(id) {
-                $.ajax({
-                    url: './curtir/' + id,
-                    method: 'GET',
-                    success: function() {
-                        let span = document.getElementById("curtidas-" + id),
-                            curtidas = Number(span.innerHTML) + 1;
-
-                        return span.innerHTML = (curtidas);
-                    },
-                    error: function() {
-                        alert(mensagemDeErro);
-                    }
+                fazerRequisicaoAjax({
+                    idPublicacao: id,
+                    idElemento: "curtidas-" + id,
+                    requisicao: 'curtir',
+                    acrescer: true,
+                    recarregar: false
                 });
             },
             compartilhar(id) {
-                $.ajax({
-                    url: './compartilhar/' + id,
-                    method: 'GET',
-                    success: function() {
-                        let span = document.getElementById("compartilhamentos-" + id),
-                            compartilhamentos = Number(span.innerHTML) + 1;
-
-                        span.innerHTML = (compartilhamentos);
-                        // Procurar uma maneira de se livrar do reload dps
-                        location.reload();
-                    },
-                    error: function() {
-                        alert(mensagemDeErro);
-                    }
-                })
+                fazerRequisicaoAjax({
+                    idPublicacao: id,
+                    idElemento: "compartilhamentos-" + id,
+                    requisicao: 'compartilhar',
+                    acrescer: true,
+                    recarregar: true
+                });
             }
         }
+    }
+
+    function fazerRequisicaoAjax({
+        idPublicacao,
+        idElemento,
+        requisicao,
+        acrescer = false,
+        recarregar = false
+    } = {}) {
+        $.ajax({
+            url: './' + requisicao + '/' + idPublicacao,
+            method: 'GET',
+            success: function() {
+                atualizarElemento(idElemento, acrescer);
+
+                if (recarregar) {
+                    location.reload();
+                }
+            },
+            error: function() {
+                alert(mensagemDeErro);
+            }
+        })
+    }
+
+    function atualizarElemento(id, acrescer) {
+        let elemento = document.getElementById(id);
+
+        if (acrescer) {
+            return elemento.innerHTML = Number(elemento.innerHTML) + 1;
+        }
+
+        return elemento.innerHTML = null;
     }
 </script>
 
