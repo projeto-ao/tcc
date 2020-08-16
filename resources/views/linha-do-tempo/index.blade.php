@@ -6,12 +6,10 @@
 @endsection
 
 @section('conteudo')
-  @isset($publicacoes)
-    <lista-publicacoes
-      :publicacoes='{{ $publicacoes }}'
-      :usuario='{{ Auth::user()->id }}'
-    />
-  @endisset
+<listar-publicacoes
+  :publicacoes='{{ $publicacoes }}'
+  :usuario='{{ Auth::user()->id }}'
+/>
 @endsection
 
 @section('js')
