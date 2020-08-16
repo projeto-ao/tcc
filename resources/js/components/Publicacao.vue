@@ -57,13 +57,13 @@
 </template>
 
 <script>
-import { requisicaoAjax } from '../utillidadesPublicacao.js';
+import { fazerRequisicaoAjax } from '../utillidadesPublicacao.js';
 
 export default {
     props: ['publicacao', 'usuario'],
     methods: {
         apagar(id) {
-            requisicaoAjax({
+            fazerRequisicaoAjax({
                 idPublicacao: id,
                 idElemento: "publicacao-" + id,
                 requisicao: 'apagar',
@@ -72,7 +72,7 @@ export default {
             });
         },
         curtir(id) {
-            requisicaoAjax({
+            fazerRequisicaoAjax({
                 idPublicacao: id,
                 idElemento: "curtidas-" + id,
                 requisicao: 'curtir',
@@ -81,7 +81,7 @@ export default {
             });
         },
         compartilhar(id) {
-            requisicaoAjax({
+            fazerRequisicaoAjax({
                 idPublicacao: id,
                 idElemento: "compartilhamentos-" + id,
                 requisicao: 'compartilhar',

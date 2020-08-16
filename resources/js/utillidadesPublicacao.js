@@ -13,7 +13,7 @@ function atualizarElemento(id, acrescer) {
     return elemento.innerHTML = null;
 }
 
-function requisicaoAjax({
+function fazerRequisicaoAjax({
     idPublicacao,
     idElemento,
     requisicao,
@@ -36,4 +36,4 @@ function requisicaoAjax({
     })
 }
 
-export { requisicaoAjax };
+export { fazerRequisicaoAjax };
