@@ -41,7 +41,7 @@
         <button class="col-md btn btn-elegant botao-interacao"
             @click="curtir(id)"
         >
-            <span :id="'curtidas-' + id">
+            <span v-show="curtidas" :id="'curtidas-' + id">
                 {{ curtidas }}
             </span>
             <i class="fab fa-pagelines"></i> Gostei
@@ -49,7 +49,7 @@
         <button class="col-md btn btn-elegant botao-interacao"
             @click="compartilhar(id)"
         >
-            <span :id="'compartilhamentos-' + id">
+            <span v-show="compartilhamentos" :id="'compartilhamentos-' + id">
                 {{ publicacao.compartilhamentos }}
             </span>
             <i class="fas fa-bezier-curve"></i> Compartilhar
