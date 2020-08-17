@@ -24,7 +24,7 @@ class Publicacoes extends Controller
 
             $publicacao->id_criador = $usuario->id;
             $publicacao->nome_criador = $usuario->name;
-            $publicacao->conteudo = $request->input('conteudo');
+            $publicacao->texto = $request->input('texto');
 
             $publicacao->save();
 
@@ -96,7 +96,7 @@ class Publicacoes extends Controller
 
             $novaPublicacao->id_criador = $usuario->id;
             $novaPublicacao->nome_criador = $publicacaoOriginal->nome_criador;
-            $novaPublicacao->conteudo = $publicacaoOriginal->conteudo;
+            $novaPublicacao->texto = $publicacaoOriginal->texto;
             $novaPublicacao->id_publicacao_original = $publicacaoOriginal->id;
             $novaPublicacao->nome_compartilhador = $usuario->name;
 
