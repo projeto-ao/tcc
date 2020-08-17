@@ -46,13 +46,16 @@
             </span>
             <i class="fab fa-pagelines"></i> Gostei
         </button>
+        <button class="col-md btn btn-elegant botao-interacao">
+            <i class="fas fa-signature"></i> Comentar
+        </button>
         <button class="col-md btn btn-elegant botao-interacao"
             @click="compartilhar(id)"
         >
             <span v-show="compartilhamentos" :id="'compartilhamentos-' + id">
                 {{ publicacao.compartilhamentos }}
             </span>
-            <i class="fas fa-bezier-curve"></i> Compartilhar
+            <i class="fas fa-share-alt"></i> Compartilhar
         </button>
     </div>
 </div>
