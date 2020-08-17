@@ -57,11 +57,18 @@
               ></textarea>
             </div>
 
+            <span id="nome-imagem"></span>
+
             <div class="row col-md-8 offset-md-2">
-              <button type="button" class="col-sm btn btn-elegant botao-anexar">
-                <span>Adicionar foto </span>
+              <input type="file"
+                id="imagem"
+                name="imagem"
+                style="display:none"
+              >
+              <label id="label-adicionar-foto" for="imagem" class="col-sm btn btn-elegant botao-anexar">
+                Adicionar foto
                 <i class="fas fa-paperclip"></i>
-              </button>
+              </label>
               <button type="submit" class="col-sm btn btn-elegant botao-enviar">
                 <span>Publicar </span>
                 <i class="fas fa-paper-plane"></i>
@@ -80,7 +87,19 @@
   <script src="{{ asset("public/MDB-Free_4.19.1/js/mdb.min.js") }}"></script>
 
   <script type="text/javascript">
-    var mensagemDeErro = 'Pedimos desculpas, mas ocorreu algo de errado, por favor descreva esse erro por email para "ghp2201@gmail.com" ou abra uma issue em nosso Github, agradeçemos pela compreensão. \r\n ~ Equipe AO.'
+    var mensagemDeErro = 'Pedimos desculpas, mas ocorreu algo de errado, por favor descreva esse erro por email para "ghp2201@gmail.com" ou abra uma issue em nosso Github, agradeçemos pela compreensão. \r\n ~ Equipe AO.';
+
+    document.getElementById("imagem").onchange = function() {
+        let span = document.getElementById("nome-imagem"),
+            label = document.getElementById("label-adicionar-foto");
+
+        try {
+            span.innerHTML = '<i class="fas fa-paperclip"></i> ' + this.files[0].name;
+            label.innerHTML = 'Alterar foto <i class="fas fa-paperclip"></i>'
+        } catch(erro) {
+            alert(mensagemDeErro);
+        }
+    };
   </script>
 
   @yield('js')
