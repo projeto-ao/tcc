@@ -29,6 +29,11 @@
 
         <div class="texto-publicacao">
             {{ texto }}
+            <p/>
+            <img class="col-md-10 offset-md-1 imagem-publicacao"
+                :src="'public/uploads/' + imagem"
+                v-if="possuiImagem"
+            >
         </div>
     </div>
 
@@ -64,10 +69,12 @@ export default {
             idCriador: this.publicacao.id_criador,
             nomeCriador: this.publicacao.nome_criador,
             texto: this.publicacao.texto,
+            imagem: this.publicacao.imagem,
             nomeCompartilhador: this.publicacao.nome_compartilhador,
             curtidas: this.publicacao.curtidas,
             compartilhamentos: this.publicacao.compartilhamentos,
             compartilhada: this.publicacao.nome_compartilhador ? true : false,
+            possuiImagem: this.publicacao.imagem ? true : false,
         }
     },
     methods: {
