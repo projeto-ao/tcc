@@ -26,6 +26,15 @@ class Publicacoes extends Controller
             $publicacao->nome_criador = $usuario->name;
             $publicacao->texto = $request->input('texto');
 
+            if ($request->file('imagem')) {
+                $imagem = $request->file('imagem');
+                $nomeImagem = date('YmdHis') . "-" . $imagem->getClientOriginalName();
+
+                $imagem->move('public/uploads/', $nomeImagem);
+
+                $publicacao->imagem = $nomeImagem;
+            }
+
             $publicacao->save();
 
             DB::commit();

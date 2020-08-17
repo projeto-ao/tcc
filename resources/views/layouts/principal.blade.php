@@ -42,7 +42,7 @@
       @endif
 
       <div id="modal-nova-publicacao" class="col-md-10 offset-md-1 modal modal-div">
-        <form class="modal-form" method="POST" action="{{ route('nova-publicacao') }}">
+        <form class="modal-form" method="POST" enctype="multipart/form-data" action="{{ route('nova-publicacao') }}">
           @csrf
 
           <div class="col-md-12 form-group">
