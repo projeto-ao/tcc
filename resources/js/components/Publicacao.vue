@@ -2,8 +2,7 @@
 <div :id="'publicacao-' + publicacao.id" class="corpo-publicacao">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="texto-nome-usuario">
-            <a class="menu-opcoes-publicacao"
-                data-toggle="dropdown"
+            <a class="menu-opcoes-publicacao" data-toggle="dropdown"
                 v-show="publicacao.id_criador == usuario"
             >
                 <i class="fas fa-ellipsis-h"></i>
@@ -40,8 +39,7 @@
             <span :id="'curtidas-' + publicacao.id">
                 {{ publicacao.curtidas }}
             </span>
-            <i class="fab fa-pagelines"></i>
-            <span> Gostei</span>
+            <i class="fab fa-pagelines"></i> Gostei
         </button>
         <button class="col-md btn btn-elegant botao-interacao"
             @click="compartilhar(publicacao.id)"
@@ -49,8 +47,7 @@
             <span :id="'compartilhamentos-' + publicacao.id">
                 {{ publicacao.compartilhamentos }}
             </span>
-            <i class="fas fa-bezier-curve"></i>
-            <span> Compartilhar</span>
+            <i class="fas fa-bezier-curve"></i> Compartilhar
         </button>
     </div>
 </div>
