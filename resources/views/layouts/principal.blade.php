@@ -61,6 +61,7 @@
 
             <div class="row col-md-8 offset-md-2">
               <input type="file"
+                accept=".jpg,.jpeg,.png"
                 id="imagem"
                 name="imagem"
                 style="display:none"

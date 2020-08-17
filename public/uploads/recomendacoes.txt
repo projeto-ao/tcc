@@ -1,0 +1,1 @@
+Evitar fazer upload de arquivos que não sejam imagens para esse diretorio
