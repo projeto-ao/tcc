@@ -11,8 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class Publicacoes extends Controller
 {
-    private $mensagemDeErro = "Pedimos desculpas, mas ocorreu algo de errado com nosso servidor, por favor descreva esse erro por email para ghp2201@gmail.com ou abra uma issue em nosso Github, agradeçemos pela compreensão. Atenciosamente Equipe AO.";
-
     public function nova(Request $request)
     {
         $usuario = \Auth::user();
@@ -26,10 +24,9 @@ class Publicacoes extends Controller
             $publicacao->nome_criador = $usuario->name;
             $publicacao->texto = $request->input('texto');
 
-            if ($request->file('imagem')) {
+            if ($request->file('imagem') !== null) {
                 $imagem = $request->file('imagem');
-                $nomeImagem = date('YmdHis') . "-" . $imagem->getClientOriginalName();
-
+                $nomeImagem = date('YmdHis')."-".$imagem->getClientOriginalName();
                 $imagem->move('public/uploads/', $nomeImagem);
 
                 $publicacao->imagem = $nomeImagem;
@@ -40,8 +37,6 @@ class Publicacoes extends Controller
             DB::commit();
         } catch(\Exception $e) {
             Log::error($e);
-
-            return $this->mensagemDeErro;
         }
 
         return redirect('linha-do-tempo');
@@ -69,14 +64,14 @@ class Publicacoes extends Controller
     {
         $publicacao = ModelPublicacoes::where('id', $idPublicacao)->first();
 
-        if ($publicacao->compartilhamentos > 0) {
-            $publicacoesFilhas = ModelPublicacoes::where('id_publicacao_original', $idPublicacao)->get();
-        }
-
         try {
             DB::beginTransaction();
 
-            if (isset($publicacoesFilhas)) {
+            if ($publicacao->compartilhamentos > 0) {
+                $publicacoesFilhas = ModelPublicacoes::
+                    where('id_publicacao_original', $idPublicacao)
+                    ->get();
+
                 foreach($publicacoesFilhas as $publicacaoFilha) {
                     $publicacaoFilha->delete();
                 }
@@ -109,14 +104,16 @@ class Publicacoes extends Controller
             $novaPublicacao->id_publicacao_original = $publicacaoOriginal->id;
             $novaPublicacao->nome_compartilhador = $usuario->name;
 
+            if ($publicacaoOriginal->imagem !== null) {
+                $novaPublicacao->imagem = $publicacaoOriginal->imagem;
+            }
+
             $publicacaoOriginal->save();
             $novaPublicacao->save();
 
             DB::commit();
         } catch(\Exception $e) {
             Log::error($e);
-
-            return $this->mensagemDeErro;
         }
     }
 }
