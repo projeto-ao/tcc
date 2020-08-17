@@ -48,7 +48,7 @@
           <div class="col-md-12 form-group">
             <div class="md-form mb-4 success-textarea active-success-textarea">
               <textarea id="texto"
-                name="conteudo"
+                name="texto"
                 class="md-textarea form-control"
                 rows="4"
                 placeholder="Escreva algo incrível ..."
