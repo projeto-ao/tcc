@@ -2,29 +2,22 @@
     Abriga funções uteis para as partes do sistema que possuem
     alguma interação com as Publicações.
 */
-
-function atualizarElemento(id, acrescer) {
-    let elemento = document.getElementById(id);
-
-    if (acrescer) {
-        return elemento.innerHTML = Number(elemento.innerHTML) + 1;
-    }
-
-    return elemento.innerHTML = null;
-}
-
-function fazerRequisicaoAjax({
+function requisicao({
     idPublicacao,
-    idElemento,
+    idElemento = null,
     requisicao,
-    acrescer = false,
+    apagar = false,
     recarregar = false
 } = {}) {
     $.ajax({
         url: './' + requisicao + '/' + idPublicacao,
         method: 'GET',
         success: function() {
-            atualizarElemento(idElemento, acrescer);
+            if (apagar) {
+                let elemento = document.getElementById(idElemento);
+
+                elemento.innerHTML = null
+            }
 
             if (recarregar) {
                 location.reload();
@@ -34,6 +27,6 @@ function fazerRequisicaoAjax({
             alert(mensagemDeErro);
         }
     })
-}
+};
 
-export { fazerRequisicaoAjax };
+export { requisicao };
