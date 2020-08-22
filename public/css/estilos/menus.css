@@ -41,6 +41,12 @@
   color: var(--cor-de-destaque) !important;
 }
 
+.menu-opcoes-item {
+  border-radius: 1rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .dropdown-item.atencao:hover {
   color: var(--cor-de-aviso) !important;
 }

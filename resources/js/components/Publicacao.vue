@@ -7,7 +7,7 @@
             >
                 <i class="fas fa-ellipsis-h"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-left">
+            <div class="dropdown-menu dropdown-menu-left menu-opcoes-item">
                 <button class="dropdown-item atencao"
                     @click="apagar(id)"
                 >
