@@ -17,7 +17,7 @@
     @yield('css')
   </head>
 
-  <body background="public/imagens/pagina-inicial/arvores.jpg">
+  <body background="{{ asset('public/imagens/pagina-inicial/arvores.jpg') }}">
     <div id="app" class="container col-sm-12 col-md-12 col-xs-12">
 
       @if(Auth::check())
