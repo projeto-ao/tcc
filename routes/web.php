@@ -24,6 +24,9 @@ Route::get('/curtir/{id}', 'Publicacoes@curtir');
 Route::get('/apagar/{id}', 'Publicacoes@apagar');
 Route::get('/compartilhar/{id}', 'Publicacoes@compartilhar');
 
+Route::get('/comentarios/{idPublicacao}', 'Comentarios@index');
+Route::get('/comentarios/novo/{idPublicacao}', 'Comentarios@novo');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
