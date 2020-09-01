@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\DB;
 
 class Comentarios extends Controller
 {
-    public function index(Request $request, $idPublicacao)
+    public function index($idPublicacao)
     {
         $usuario = \Auth::user();
 
@@ -18,8 +18,13 @@ class Comentarios extends Controller
             ->first()
             ->toJson();
 
+        $comentarios = ModelComentarios::where('id_publicacao', 1)
+            ->get()
+            ->toJson();
+
         return view('linha-do-tempo.comentarios', [
             'publicacao' => $publicacao,
+            'comentarios' => $comentarios
         ]);
     }
 
@@ -44,5 +49,7 @@ class Comentarios extends Controller
         } catch (\Exception $e) {
             Log::error($e);
         }
+
+        return $this->index($idPublicacao);
     }
 }
