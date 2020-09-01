@@ -18,7 +18,7 @@ class Comentarios extends Controller
             ->first()
             ->toJson();
 
-        $comentarios = ModelComentarios::where('id_publicacao', 1)
+        $comentarios = ModelComentarios::where('id_publicacao', $idPublicacao)
             ->get()
             ->toJson();
 
