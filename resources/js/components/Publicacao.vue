@@ -17,7 +17,7 @@
 
             <template v-if="compartilhada">
                 {{ nomeCompartilhador }}
-                <span class="texto-compartilhou">
+                <span class="texto-secundario">
                     - Compartilhou uma publicação de
                     {{ nomeCriador }}
                 </span>
@@ -27,7 +27,7 @@
             </template>
         </div>
 
-        <div class="texto-publicacao">
+        <div class="texto-principal">
             {{ texto }}
             <p/>
             <img class="col-md-10 offset-md-1 imagem-publicacao"

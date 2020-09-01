@@ -18,12 +18,12 @@
             -->
 
             {{ nomeCriador }}
-            <span class="texto-compartilhou">
+            <span class="texto-secundario">
                 - Respondeu
             </span>
         </div>
 
-        <div class="texto-publicacao">
+        <div class="texto-principal">
             {{ texto }}
         </div>
     </div>

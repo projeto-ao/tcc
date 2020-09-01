@@ -9,13 +9,13 @@
   padding: 0.25rem;
 }
 
-.texto-publicacao {
+.texto-principal {
   font-size: 1rem;
   padding: 0.25rem;
   text-align: justify;
 }
 
-.texto-compartilhou {
+.texto-secundario {
   color: #bdc3c7;
   font-size: 0.80rem;
 }
