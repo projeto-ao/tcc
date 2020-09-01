@@ -42,14 +42,16 @@ class Comentarios extends Controller
             $comentario->id_publicacao = $publicacao->id;
             $comentario->nome_criador = $usuario->name;
             $comentario->texto = $request->input('comentario');
+            $publicacao->comentarios += 1;
 
             $comentario->save();
+            $publicacao->save();
 
             DB::commit();
         } catch (\Exception $e) {
             Log::error($e);
         }
 
-        return $this->index($idPublicacao);
+        return back();
     }
 }

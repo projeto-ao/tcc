@@ -20,6 +20,7 @@ class CriarTabelaDePublicacoes extends Migration
             $table->text('texto');
             $table->text('imagem')->nullable();
             $table->integer('curtidas')->default(0);
+            $table->integer('comentarios')->default(0);
             $table->integer('compartilhamentos')->default(0);
             $table->integer('id_publicacao_original')->nullable();
             $table->integer('id_compartilhador')->nullable();
