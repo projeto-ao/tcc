@@ -1,5 +1,5 @@
 <template>
-<div :id="'comentario-' + id" class="corpo-publicacao">
+<div :id="'comentario-' + id">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="texto-nome-usuario">
             <!--
@@ -27,6 +27,7 @@
             {{ texto }}
         </div>
     </div>
+    <hr>
 </div>
 </template>
 

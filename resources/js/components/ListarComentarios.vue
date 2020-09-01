@@ -7,13 +7,15 @@
         />
 
         <div class="col-md-10 offset-md-1">
-            <div v-for="comentario in comentarios.slice().reverse()"
-                :key="comentario.id"
-            >
-                <Comentario
-                    :comentario="comentario"
-                    :usuario="usuario"
-                />
+            <div class="corpo-publicacao">
+                <div v-for="comentario in comentarios.slice().reverse()"
+                    :key="comentario.id"
+                >
+                    <Comentario
+                        :comentario="comentario"
+                        :usuario="usuario"
+                    />
+                </div>
             </div>
         </div>
     </div>
