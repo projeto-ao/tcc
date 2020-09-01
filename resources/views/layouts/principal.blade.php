@@ -28,6 +28,10 @@
           </button>
 
           <div class="dropdown-menu dropdown-menu-right menu-principal-dropdown">
+            <a class="dropdown-item" href={{ route('linha-do-tempo') }}>
+              <span>Início </span>
+              <i class="fas fa-tree"></i>
+            </a>
             <button class="dropdown-item" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">
               <span>Novo </span>
               <i class="fas fa-plus"></i>
