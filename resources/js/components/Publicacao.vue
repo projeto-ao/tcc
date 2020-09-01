@@ -54,26 +54,26 @@
     <div class="row col-md-8 offset-md-2"
         v-show="!comentarios"
     >
-        <button class="col-md btn btn-elegant botao-interacao"
+        <button class="col-md btn btn-elegant botao-interacao" title="Curtir"
             @click="curtir(id)"
         >
             <span v-show="curtidas" :id="'curtidas-' + id">
                 {{ curtidas }}
             </span>
-            <i class="fab fa-pagelines"></i> Gostei
+            <i class="fab fa-pagelines"></i>
         </button>
-        <a class="col-md btn btn-elegant botao-interacao"
+        <a class="col-md btn btn-elegant botao-interacao" title="Comentários"
             :href="'./comentarios/' + id"
         >
-            <i class="fas fa-signature"></i> Comentarios
+            <i class="fas fa-signature"></i>
         </a>
-        <button class="col-md btn btn-elegant botao-interacao"
+        <button class="col-md btn btn-elegant botao-interacao" title="Compartilhar"
             @click="compartilhar(id)"
         >
             <span v-show="compartilhamentos" :id="'compartilhamentos-' + id">
                 {{ publicacao.compartilhamentos }}
             </span>
-            <i class="fas fa-share-alt"></i> Compartilhar
+            <i class="fas fa-share-alt"></i>
         </button>
     </div>
 </div>
