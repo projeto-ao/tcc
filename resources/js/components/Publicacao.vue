@@ -37,7 +37,23 @@
         </div>
     </div>
 
-    <div class="row col-md-8 offset-md-2">
+    <!-- Seção de inputs para a view de comentarios -->
+    <form method="GET"
+        :action="'./novo/' + id"
+        v-show="comentarios"
+    >
+        <div class="row col-md-10 offset-md-1 md-form mb-4 success-textarea active-success-textarea">
+            <textarea id="comentario" name="comentario" class="col-md-10 md-textarea form-control" rows="1" placeholder="Escreva seu comentário ..." maxlength="255" required></textarea>
+
+            <button type="submit" class="col-md btn btn-elegant botao-enviar">
+                <i class="fas fa-paper-plane"></i>
+            </button>
+        </div>
+    </form>
+
+    <div class="row col-md-8 offset-md-2"
+        v-show="!comentarios"
+    >
         <button class="col-md btn btn-elegant botao-interacao"
             @click="curtir(id)"
         >
@@ -46,9 +62,11 @@
             </span>
             <i class="fab fa-pagelines"></i> Gostei
         </button>
-        <button class="col-md btn btn-elegant botao-interacao">
-            <i class="fas fa-signature"></i> Comentar
-        </button>
+        <a class="col-md btn btn-elegant botao-interacao"
+            :href="'./comentarios/' + id"
+        >
+            <i class="fas fa-signature"></i> Comentarios
+        </a>
         <button class="col-md btn btn-elegant botao-interacao"
             @click="compartilhar(id)"
         >
@@ -65,7 +83,7 @@
 import { requisicao } from '../utillidadesPublicacao.js';
 
 export default {
-    props: ['publicacao', 'usuario'],
+    props: ['publicacao', 'usuario', 'comentarios'],
     data () {
         return {
             id: this.publicacao.id,
