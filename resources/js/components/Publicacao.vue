@@ -65,13 +65,16 @@
         <a class="col-md btn btn-elegant botao-interacao" title="Comentários"
             :href="'./comentarios/' + id"
         >
+            <span v-show="qtdComentarios" :id="'comentarios-' + id">
+                {{ qtdComentarios }}
+            </span>
             <i class="fas fa-signature"></i>
         </a>
         <button class="col-md btn btn-elegant botao-interacao" title="Compartilhar"
             @click="compartilhar(id)"
         >
             <span v-show="compartilhamentos" :id="'compartilhamentos-' + id">
-                {{ publicacao.compartilhamentos }}
+                {{ compartilhamentos }}
             </span>
             <i class="fas fa-share-alt"></i>
         </button>
@@ -94,6 +97,7 @@ export default {
             nomeCompartilhador: this.publicacao.nome_compartilhador,
             curtidas: this.publicacao.curtidas,
             compartilhamentos: this.publicacao.compartilhamentos,
+            qtdComentarios: this.publicacao.comentarios,
             compartilhada: this.publicacao.nome_compartilhador ? true : false,
             possuiImagem: this.publicacao.imagem ? true : false,
         }

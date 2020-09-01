@@ -2,24 +2,9 @@
 <div :id="'comentario-' + id">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="texto-nome-usuario">
-            <!--
-            <a class="menu-opcoes-publicacao" data-toggle="dropdown"
-                v-show="idCriador == usuario"
-            >
-                <i class="fas fa-ellipsis-h"></i>
-            </a>
-            <div class="dropdown-menu dropdown-menu-left menu-opcoes-item">
-                <button class="dropdown-item atencao"
-                    @click="apagar(id)"
-                >
-                    <i class="fas fa-trash"></i> Apagar comentário
-                </button>
-            </div>
-            -->
-
             {{ nomeCriador }}
             <span class="texto-secundario">
-                - Respondeu
+                - Comentou
             </span>
         </div>
 
