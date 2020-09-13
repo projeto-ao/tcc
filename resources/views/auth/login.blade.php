@@ -63,6 +63,10 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="col-md-10 offset-md-1">
+                            <exibir-campanhas/>
+                        </div>
                     </form>
                 </div>
             </div>

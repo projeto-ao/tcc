@@ -22,6 +22,7 @@ window.Vue = require('vue');
 Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('listar-publicacoes', require('./components/ListarPublicacoes.vue').default);
 Vue.component('listar-comentarios', require('./components/ListarComentarios.vue').default);
+Vue.component('exibir-campanhas', require('./components/Campanhas.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
