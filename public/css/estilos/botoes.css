@@ -45,3 +45,9 @@
 .botao-interacao:hover {
   background-color: var(--cor-de-destaque) !important;
 }
+
+@media (max-width: 480px) {
+  .botao-enviar {
+    background-color: var(--cor-de-destaque) !important;
+  }
+}
