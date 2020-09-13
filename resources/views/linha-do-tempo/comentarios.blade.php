@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 
-@section('titulo', 'Projeto AO')
+@section('titulo', 'AO - Comentários')
 
 @section('css')
 @endsection
