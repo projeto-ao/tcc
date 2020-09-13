@@ -1,5 +1,5 @@
 <template>
-<div class="sticky-top">
+<div>
     <button class="btn menu-principal" data-toggle="dropdown" title="Menu">
         <i class="fas fa-align-center"></i>
     </button>
