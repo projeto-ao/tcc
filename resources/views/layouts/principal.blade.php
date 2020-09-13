@@ -21,27 +21,8 @@
     <div id="app" class="container col-sm-12 col-md-12 col-xs-12">
 
       @if(Auth::check())
-        <div class="col-md-4 offset-md-8 sticky-top">
-          <button class="btn menu-principal" data-toggle="dropdown">
-            <span class="ocultar-em-mobile">Menu </span>
-            <i class="fas fa-align-center"></i>
-          </button>
-
-          <div class="dropdown-menu dropdown-menu-right menu-principal-dropdown">
-            <a class="dropdown-item" href={{ route('linha-do-tempo') }}>
-              <span>Início </span>
-              <i class="fas fa-tree"></i>
-            </a>
-            <button class="dropdown-item" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">
-              <span>Novo </span>
-              <i class="fas fa-plus"></i>
-            </button>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="https://github.com/projeto-ao/projeto-ao" target="_blank">
-              <span>Sobre </span>
-              <i class="fab fa-github"></i>
-            </a>
-          </div>
+        <div class="col-md-4 offset-md-8">
+          <menu-principal/>
         </div>
       @endif
 
