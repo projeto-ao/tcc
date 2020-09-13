@@ -8,9 +8,7 @@
   font-size: 1.75rem;
   background-color: var(--cor-do-corpo) !important;
   color: var(--cor-texto-geral) !important;
-  text-align: right;
   border-radius: 1rem;
-  float: right;
 }
 
 .menu-principal-dropdown {
@@ -49,4 +47,18 @@
 
 .dropdown-item.atencao:hover {
   color: var(--cor-de-aviso) !important;
+}
+
+@media (min-width: 480px) {
+  .menu-principal {
+    float: right;
+  }
+}
+
+@media (max-width: 479px) {
+  .menu-principal {
+    width: -moz-available; /* Para uso em navegadores mozilla */
+    width: -webkit-fill-available; /* Para uso em navegadores webkit */
+    text-align: right;
+  }
 }

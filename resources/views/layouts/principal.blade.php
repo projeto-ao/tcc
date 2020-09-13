@@ -18,10 +18,10 @@
   </head>
 
   <body background="{{ asset('public/imagens/pagina-inicial/arvores.jpg') }}">
-    <div id="app" class="container col-sm-12 col-md-12 col-xs-12">
+    <div id="app" class="container">
 
       @if(Auth::check())
-        <div class="col-md-4 offset-md-8 sticky-top">
+        <div class="col-12 col-md-4 offset-md-8 sticky-top">
           <menu-principal/>
         </div>
       @endif
