@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User as ModelUsuarios;
 use App\Publicacoes as ModelPublicacoes;
+use App\Http\Controllers\ImagemHelper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
@@ -17,20 +18,17 @@ class Publicacoes extends Controller
 
         $publicacao = new ModelPublicacoes();
 
+        $requestImagem = $request->file('imagem');
+
         try {
             DB::beginTransaction();
 
             $publicacao->id_criador = $usuario->id;
             $publicacao->nome_criador = $usuario->name;
             $publicacao->texto = $request->input('texto');
-
-            if ($request->file('imagem') !== null) {
-                $imagem = $request->file('imagem');
-                $nomeImagem = date('YmdHis')."-".$imagem->getClientOriginalName();
-                $imagem->move('public/uploads/', $nomeImagem);
-
-                $publicacao->imagem = $nomeImagem;
-            }
+            $publicacao->imagem = $requestImagem
+                ? (new ImagemHelper)->salvarImagem($requestImagem)
+                : null;
 
             $publicacao->save();
 
