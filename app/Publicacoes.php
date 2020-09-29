@@ -17,8 +17,14 @@ class Publicacoes extends Model
     protected $fillable = [
         'id_criador',
         'nome_criador',
-        'conteudo',
+        'texto',
+        'imagem',
         'curtidas',
+        'compartilhamentos',
+        'id_publicacao_original',
+        'id_compartilhador',
+        'nome_compartilhador',
+        'comentarios',
     ];
 
 }
