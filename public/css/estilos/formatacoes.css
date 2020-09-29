@@ -20,6 +20,14 @@
   font-size: 0.80rem;
 }
 
+.link-perfil {
+  color: inherit;
+}
+
+.link-perfil:hover {
+  color: var(--cor-de-destaque)
+}
+
 /* Configura exibição dos textos em plataformas mobile */
 .ocultar-em-mobile {
   display: inline;

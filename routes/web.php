@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
     return view('pagina-inicial.index');
 });
@@ -27,6 +29,4 @@ Route::get('/compartilhar/{id}', 'Publicacoes@compartilhar');
 Route::get('/comentarios/{idPublicacao}', 'Comentarios@index');
 Route::get('/comentarios/novo/{idPublicacao}', 'Comentarios@novo');
 
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/perfil/{id}', 'Perfis@index');

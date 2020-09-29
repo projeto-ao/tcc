@@ -15,6 +15,11 @@
             <i class="fas fa-plus"></i>
         </a>
 
+        <a class="dropdown-item" :href="'/perfil/' + usuario ">
+            <span>Perfil </span>
+            <i class="fas fa-user"></i>
+        </a>
+
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="https://github.com/projeto-ao/projeto-ao" target="_blank">
             <span>Sobre </span>
@@ -26,6 +31,6 @@
 
 <script>
 export default {
-
+    props: ['usuario'],
 }
 </script>

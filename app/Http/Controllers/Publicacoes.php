@@ -98,10 +98,11 @@ class Publicacoes extends Controller
 
             $publicacaoOriginal->compartilhamentos += 1;
 
-            $novaPublicacao->id_criador = $usuario->id;
+            $novaPublicacao->id_criador = $publicacaoOriginal->id_criador;
             $novaPublicacao->nome_criador = $publicacaoOriginal->nome_criador;
             $novaPublicacao->texto = $publicacaoOriginal->texto;
             $novaPublicacao->id_publicacao_original = $publicacaoOriginal->id;
+            $novaPublicacao->id_compartilhador = $usuario->id;
             $novaPublicacao->nome_compartilhador = $usuario->name;
 
             if ($publicacaoOriginal->imagem !== null) {

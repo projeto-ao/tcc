@@ -22,7 +22,9 @@
 
       @if(Auth::check())
         <div class="col-12 col-md-4 offset-md-8 sticky-top">
-          <menu-principal/>
+          <menu-principal
+            :usuario='{{ Auth::user()->id }}'
+          />
         </div>
       @endif
 

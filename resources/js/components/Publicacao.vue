@@ -16,14 +16,20 @@
             </div>
 
             <template v-if="compartilhada">
-                {{ nomeCompartilhador }}
+                <a class="link-perfil" :href="'/perfil/' + idCompartilhador">
+                    {{ nomeCompartilhador }}
+                </a>
                 <span class="texto-secundario">
                     - Compartilhou uma publicação de
-                    {{ nomeCriador }}
+                    <a class="link-perfil" :href="'/perfil/' + idCriador">
+                        {{ nomeCriador }}
+                    </a>
                 </span>
             </template>
             <template v-else>
-                {{ nomeCriador }}
+                <a class="link-perfil" :href="'/perfil/' + idCriador">
+                    {{ nomeCriador }}
+                </a>
             </template>
         </div>
 
@@ -31,7 +37,7 @@
             {{ texto }}
             <p/>
             <img class="col-md-10 offset-md-1 imagem-publicacao"
-                :src="'public/uploads/' + imagem"
+                :src="'/public/uploads/' + imagem"
                 v-if="possuiImagem"
             >
         </div>
@@ -65,7 +71,7 @@
                 <i class="fab fa-pagelines"></i>
             </button>
             <a class="col btn btn-elegant botao-interacao" title="Comentários"
-                :href="'./comentarios/' + id"
+                :href="'/comentarios/' + id"
             >
                 <span v-show="qtdComentarios" :id="'comentarios-' + id">
                     {{ qtdComentarios }}
@@ -97,6 +103,7 @@ export default {
             nomeCriador: this.publicacao.nome_criador,
             texto: this.publicacao.texto,
             imagem: this.publicacao.imagem,
+            idCompartilhador: this.publicacao.id_compartilhador,
             nomeCompartilhador: this.publicacao.nome_compartilhador,
             curtidas: this.publicacao.curtidas,
             compartilhamentos: this.publicacao.compartilhamentos,
