@@ -10,7 +10,7 @@ function requisicao({
     recarregar = false
 } = {}) {
     $.ajax({
-        url: './' + requisicao + '/' + idPublicacao,
+        url: '/' + requisicao + '/' + idPublicacao,
         method: 'GET',
         success: function() {
             if (apagar) {
