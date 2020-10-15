@@ -1,25 +1,25 @@
 version: '3.1'
 
 services:
-    php:
-        build:
-          context: .
-          dockerfile: Dockerfile-php-apache
-        volumes:
-            - ./:/var/www/
-            - ./:/var/www/html/
-        ports:
-          - "80:80"
-        depends_on:
-          - mysql
+  php:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www/
+      - ./:/var/www/html/
+    ports:
+      - "80:80"
+    depends_on:
+      - mysql
 
-    mysql:
-        image: mysql:8.0
-        command: --default-authentication-plugin=mysql_native_password
-        restart: always
-        env_file:
-            - .env
-        volumes:
-            - ./db:/var/lib/mysql
-        ports:
-            - "3306:3306"
+  mysql:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./db:/var/lib/mysql
+    ports:
+      - "3306:3306"

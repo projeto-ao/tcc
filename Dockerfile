@@ -1,8 +1,8 @@
 FROM php:7.3.5-apache
 
 RUN apt-get update \
-	  && echo 'deb http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list \
-	  && echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list \
+  && echo 'deb http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list \
+  && echo 'deb-src http://packages.dotdeb.org jessie all' >> /etc/apt/sources.list \
   && apt-get install -y gnupg wget \
   && apt-get install -y libzip-dev \
   && wget https://www.dotdeb.org/dotdeb.gpg -O /tmp/dotdeb.gpg \
@@ -22,4 +22,3 @@ RUN docker-php-ext-install gd
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
 RUN a2enmod rewrite
-
