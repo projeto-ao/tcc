@@ -11,19 +11,21 @@ O projeto AO pode ser executado em qualquer plataforma que cumpra com as depend�
 A equipe de desenvolvimento não se responsabiliza por quaisquer erros ocasionados em outras plataformas de execução e desenvolvimento senão o **Docker**.  
 
 ## Instalação e configuração do projeto
-1. Baixar e instalar o **[Docker][1]**  
+1. Baixar e instalar o [Docker][1]  
 2. Clonar esse repositório no diretório desejado  
-3. Copiar e colar o arquivo _.env.example_ na pasta raiz  
-4. renomear o arquivo _.env.example_ como _.env_  
-5. Abrir o terminal na pasta raiz do projeto  
-6. Iniciar o Docker  
-7. No terminal executar o docker-compose com o comando `docker-compose up -d`  
-8. Entrar no terminal do php com `docker-compose exec php bash`  
-9. Dentro do terminal do php executar o comando `cd ..`
-10. Instalar o composer com o comando `composer install`  
-11. Criar uma chave Laravel com o comando `php artisan key:generate`  
-12. Executar as migrações com `php artisan migrate`  
-13. Sair do terminal do php com o comando `exit`  
+3. Copiar e colar o arquivo _.env.example_ na pasta raiz do projeto  
+4. renomear o arquivo copiado como _.env_
+5. Iniciar o Docker  
+6. Abrir o terminal na pasta raiz do projeto  
+7. No terminal iniciar o ambiente Docker com o comando `docker-compose up -d`  
+8. Entrar no PHP Bash com `docker-compose exec php bash`  
+9. Dentro do PHP Bash executar os seguintes comandos  
+    1. `cd ..` - Altera o diretório atual para _/var/www/_  
+    2. `composer install` - Instala o Composer e suas dependências  
+    3. `php artisan key:generate` - Cria uma chave Laravel  
+    4. `php artisan migrate` - Executa as migrations e inicia o banco de dados  
+    5. `exit` - Encerra o PHP Bash  
+10. Executar o projeto a partir do navegador com a url _localhost/_ 
 
 ## Executando
 1. Abrir o terminal na pasta raiz do projeto  
