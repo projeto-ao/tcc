@@ -24,6 +24,10 @@
         <div class="col-12 col-md-4 offset-md-8 sticky-top">
           <menu-principal
             :usuario='{{ Auth::user()->id }}'
+
+            @if (Auth::user()->imagem)
+              :imagem-usuario='{{ Auth::user()->imagem }}'
+            @endif
           />
         </div>
       @endif

@@ -62,3 +62,9 @@
     text-align: right;
   }
 }
+
+.imagem-menu {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
