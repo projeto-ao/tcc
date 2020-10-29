@@ -2,13 +2,10 @@
 <div id="carousel-campanhas" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="/public/imagens/pagina-inicial/arvores.jpg" class="d-block w-100">
+            <img src="/public/imagens/banner_importancia_reciclagem.jpg" class="d-block w-100">
         </div>
         <div class="carousel-item">
-            <img src="/public/imagens/pagina-inicial/arvores.jpg" class="d-block w-100">
-        </div>
-        <div class="carousel-item">
-            <img src="/public/imagens/pagina-inicial/arvores.jpg" class="d-block w-100">
+            <img src="/public/imagens/banner_substituir_plasticos.jpg" class="d-block w-100">
         </div>
     </div>
     <a class="carousel-control-prev" href="#carousel-campanhas" role="button" data-slide="prev" title="Anterior">
