@@ -17,7 +17,7 @@
                         @csrf
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-3 md-form">
+                            <div class="col col-md-6 offset-md-3 md-form">
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="E-mail">
 
                                 @error('email')
@@ -29,7 +29,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-3 md-form">
+                            <div class="col col-md-6 offset-md-3 md-form">
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="Senha">
 
                                 @error('password')
@@ -41,7 +41,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <div class="col-md-6 offset-md-3">
+                            <div class="col col-md-6 offset-md-3">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
@@ -51,20 +51,24 @@
                         </div>
 
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-3">
-                                <button type="submit" class="btn btn-success botao-auth">
+                            <div class="col col-md-6 offset-md-3">
+                                <button type="submit" class="col btn btn-elegant botao-auth">
                                     Entrar
                                 </button>
+                            </div>
+                        </div>
 
+                        <div class="form-group row mb-0">
+                            <div class="col col-md-6 offset-md-3">
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="col btn btn-link" href="{{ route('password.request') }}">
                                         Esqueceu-se da sua senha?
                                     </a>
                                 @endif
                             </div>
                         </div>
 
-                        <div class="col-md-10 offset-md-1">
+                        <div class="col col-md-10 offset-md-1">
                             <exibir-campanhas/>
                         </div>
                     </form>

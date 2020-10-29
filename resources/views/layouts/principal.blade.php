@@ -26,7 +26,7 @@
             :usuario='{{ Auth::user()->id }}'
 
             @if (Auth::user()->imagem)
-              :imagem-usuario='{{ Auth::user()->imagem }}'
+              :imagem-usuario="'{{ Auth::user()->imagem }}'"
             @endif
           />
         </div>

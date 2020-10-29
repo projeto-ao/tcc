@@ -3,8 +3,8 @@
     <button class="btn menu-principal" data-toggle="dropdown" title="Menu">
         <img class="imagem-menu"
             :src="imagemUsuario != null
-                ? '/public/fotos-de-perfil' + imagemUsuario
-                : '/public/fotos-de-perfil/foto_padrao.jpeg'
+                ? '/public/uploads/' + imagemUsuario
+                : '/public/imagens/foto_perfil_padrao.jpeg'
         "/>
     </button>
 
@@ -23,13 +23,6 @@
             <span>Perfil </span>
             <i class="fas fa-user"></i>
         </a>
-
-        <template v-show="! imagemUsuario">
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" :href="'/adicionar-imagem-de-perfil/' + usuario">
-                <span>Foto Perfil</span>
-            </a>
-        </template>
 
         <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="https://github.com/projeto-ao/projeto-ao" target="_blank">

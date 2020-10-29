@@ -42,12 +42,14 @@
 
 .botao-enviar:hover,
 .botao-anexar:hover,
-.botao-interacao:hover {
+.botao-interacao:hover,
+.botao-auth:hover {
   background-color: var(--cor-de-destaque) !important;
 }
 
 @media (max-width: 480px) {
-  .botao-enviar {
+  .botao-enviar,
+  .botao-auth {
     background-color: var(--cor-de-destaque) !important;
   }
 }
