@@ -19,15 +19,17 @@ Route::get('/', function () {
     return view('pagina-inicial.index');
 })->name('pagina-inicial');
 
-Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
+Route::middleware('auth')->group(function () {
+    Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
 
-Route::post('/nova-publicacao', 'Publicacoes@nova')->name('nova-publicacao');
-Route::get('/curtir/{id}', 'Publicacoes@curtir');
-Route::get('/apagar/{id}', 'Publicacoes@apagar');
-Route::get('/compartilhar/{id}', 'Publicacoes@compartilhar');
+    Route::post('/nova-publicacao', 'Publicacoes@nova')->name('nova-publicacao');
+    Route::get('/curtir/{id}', 'Publicacoes@curtir');
+    Route::get('/apagar/{id}', 'Publicacoes@apagar');
+    Route::get('/compartilhar/{id}', 'Publicacoes@compartilhar');
 
-Route::get('/comentarios/{idPublicacao}', 'Comentarios@index');
-Route::get('/comentarios/novo/{idPublicacao}', 'Comentarios@novo');
+    Route::get('/comentarios/{idPublicacao}', 'Comentarios@index');
+    Route::get('/comentarios/novo/{idPublicacao}', 'Comentarios@novo');
 
-Route::get('/perfil/{id}', 'Perfis@index');
-Route::get('/sair', 'Perfis@sair');
+    Route::get('/perfil/{id}', 'Perfis@index');
+    Route::get('/sair', 'Perfis@sair');
+});
