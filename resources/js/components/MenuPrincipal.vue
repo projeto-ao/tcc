@@ -25,6 +25,12 @@
         </a>
 
         <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/sair/">
+            <span>Sair </span>
+            <i class="fas fa-sign-out-alt"></i>
+        </a>
+
+        <div class="dropdown-divider"></div>
         <a class="dropdown-item" href="https://github.com/projeto-ao/projeto-ao" target="_blank">
             <span>Sobre </span>
             <i class="fab fa-github"></i>

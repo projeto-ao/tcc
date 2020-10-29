@@ -27,4 +27,9 @@ class Perfis extends Controller
             'publicacoes' => $publicacoes,
         ]);
     }
+
+    public function sair()
+    {
+        return redirect(route('pagina-inicial'))->with(\Auth::logout());
+    }
 }

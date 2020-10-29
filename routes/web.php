@@ -17,7 +17,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('pagina-inicial.index');
-});
+})->name('pagina-inicial');
 
 Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
 
@@ -30,3 +30,4 @@ Route::get('/comentarios/{idPublicacao}', 'Comentarios@index');
 Route::get('/comentarios/novo/{idPublicacao}', 'Comentarios@novo');
 
 Route::get('/perfil/{id}', 'Perfis@index');
+Route::get('/sair', 'Perfis@sair');
