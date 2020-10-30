@@ -11,18 +11,6 @@
   .corpo-publicacao {
     padding: 1rem;
   }
-
-  .corpo-imagem-perfil {
-    border-radius: 50%;
-    background-color: #fff;
-    padding: 1rem;
-  }
-
-  .imagem-perfil {
-    border-radius: 50%;
-    height: 9rem;
-    width: 9rem;
-  }
 </style>
 @endsection
 
