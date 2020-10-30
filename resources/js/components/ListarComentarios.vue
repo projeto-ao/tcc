@@ -3,7 +3,7 @@
         <Publicacao
             :publicacao="publicacao"
             :usuario="usuario"
-            :comentarios="true"
+            :telaDeComentarios="true"
         />
 
         <div class="col-md-10 offset-md-1">
