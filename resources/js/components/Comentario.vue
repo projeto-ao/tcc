@@ -9,7 +9,7 @@
         </div>
 
         <div class="texto-principal">
-            {{ texto }}
+            <span style="white-space: pre;">{{ texto }}</span>
         </div>
     </div>
     <hr>

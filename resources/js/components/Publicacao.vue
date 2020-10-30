@@ -34,7 +34,7 @@
         </div>
 
         <div class="texto-principal">
-            {{ texto }}
+            <span style="white-space: pre;">{{ texto }}</span>
             <p/>
             <img class="col-md-10 offset-md-1 imagem-publicacao"
                 :src="'/public/uploads/' + imagem"
