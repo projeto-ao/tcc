@@ -8,7 +8,7 @@
     font-weight: bold;
   }
 
-  .corpo-publicacao {
+  .corpo.nome {
     padding: 1rem;
   }
 </style>
@@ -24,7 +24,7 @@
 </div>
 
 <div class="col-md-6 offset-md-3 text-center">
-  <div class="corpo-publicacao">
+  <div class="corpo nome">
     <h2>{{ $perfil->name }}</h2>
   </div>
 </div>

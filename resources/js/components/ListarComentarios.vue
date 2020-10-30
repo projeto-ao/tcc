@@ -7,7 +7,7 @@
         />
 
         <div class="col-md-10 offset-md-1">
-            <div class="corpo-publicacao">
+            <div class="corpo">
                 <div v-for="comentario in comentarios.slice().reverse()"
                     :key="comentario.id"
                 >

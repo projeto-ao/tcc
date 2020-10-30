@@ -1,5 +1,5 @@
 <template>
-<div :id="'publicacao-' + id" class="corpo-publicacao">
+<div :id="'publicacao-' + id" class="corpo">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="texto-nome-usuario">
             <a class="menu-opcoes-publicacao" data-toggle="dropdown"
