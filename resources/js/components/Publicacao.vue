@@ -1,44 +1,48 @@
 <template>
-<div :id="'publicacao-' + id" class="corpo">
+<div :id="'publicacao-' + publicacao.id" class="corpo">
     <div class="col-md-12 col-sm-12 col-xs-12">
         <div class="texto-nome-usuario">
-            <template v-show="idCriador == usuario">
+            <template v-if="publicacao.id_criador == usuario
+                || publicacao.id_compartilhador == usuario">
                 <a class="menu-opcoes-publicacao" data-toggle="dropdown">
                     <i class="fas fa-ellipsis-h"></i>
                 </a>
 
                 <div class="dropdown-menu dropdown-menu-left menu-opcoes-item">
-                    <button class="dropdown-item atencao" @click="apagar(id)">
+                    <button class="dropdown-item atencao"
+                        @click="apagar(publicacao.id)"
+                    >
                         <i class="fas fa-trash"></i> Apagar publicação
                     </button>
                 </div>
             </template>
 
-            <template v-if="idCompartilhador">
-                <a class="link-perfil" :href="'/perfil/' + idCompartilhador">
-                    {{ nomeCompartilhador }}
+            <template v-if="compartilhador">
+                <a class="link-perfil" :href="'/perfil/' + compartilhador.id">
+                    {{ compartilhador.name }}
                 </a>
                 <span class="texto-secundario">
                     - Compartilhou uma publicação de
-                    <a class="link-perfil" :href="'/perfil/' + idCriador">
-                        {{ nomeCriador }}
+                    <a class="link-perfil" :href="'/perfil/' + criador.id">
+                        {{ criador.name }}
                     </a>
                 </span>
             </template>
             <template v-else>
-                <a class="link-perfil" :href="'/perfil/' + idCriador">
-                    {{ nomeCriador }}
+                <a class="link-perfil" :href="'/perfil/' + criador.id">
+                    {{ criador.name }}
                 </a>
             </template>
         </div>
 
         <div class="texto-principal">
-            <span style="white-space: pre;">{{ texto }}</span>
+            <span style="white-space: pre;">{{ publicacao.texto }}</span>
+
             <p/>
 
             <img class="col-md-10 offset-md-1 imagem-publicacao"
-                :src="'/public/uploads/' + imagem"
-                v-if="imagem"
+                v-if="publicacao.imagem"
+                :src="'/public/uploads/' + publicacao.imagem"
             >
         </div>
     </div>
@@ -49,7 +53,7 @@
 </template>
 
 <script>
-import { requisicao } from '../utillidadesPublicacao.js';
+import { requisicao, obterCriadorECompartilhador } from '../utillidadesPublicacao.js';
 import BarraInteracoes from './BarraInteracoes.vue';
 import BarraComentario from './BarraComentario.vue';
 
@@ -61,13 +65,8 @@ export default {
     props: ['publicacao', 'usuario', 'telaDeComentarios'],
     data () {
         return {
-            id: this.publicacao.id,
-            idCriador: this.publicacao.id_criador,
-            nomeCriador: this.publicacao.nome_criador,
-            idCompartilhador: this.publicacao.id_compartilhador,
-            nomeCompartilhador: this.publicacao.nome_compartilhador,
-            texto: this.publicacao.texto,
-            imagem: this.publicacao.imagem,
+            criador: '',
+            compartilhador: '',
         }
     },
     methods: {
@@ -79,6 +78,25 @@ export default {
                 apagar: true,
             });
         },
+    },
+    mounted: function() {
+        var self = this;
+
+        $.ajax({
+            url: '/obter-criador-e-compartilhador/',
+            method: 'GET',
+            data: {
+                id_criador: self.publicacao.id_criador,
+                id_compartilhador: self.publicacao.id_compartilhador
+            },
+            success: function(dados) {
+                self.criador = dados.criador;
+                self.compartilhador = dados.compartilhador;
+            },
+            error: function() {
+                alert(mensagemDeErro);
+            },
+        });
     }
 }
 </script>

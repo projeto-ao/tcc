@@ -24,7 +24,6 @@ class Publicacoes extends Controller
             DB::beginTransaction();
 
             $publicacao->id_criador = $usuario->id;
-            $publicacao->nome_criador = $usuario->name;
             $publicacao->texto = $request->input('texto');
             $publicacao->imagem = $requestImagem
                 ? (new ImagemHelper)->salvarImagem($requestImagem)
@@ -97,11 +96,9 @@ class Publicacoes extends Controller
             $publicacaoOriginal->compartilhamentos += 1;
 
             $novaPublicacao->id_criador = $publicacaoOriginal->id_criador;
-            $novaPublicacao->nome_criador = $publicacaoOriginal->nome_criador;
             $novaPublicacao->texto = $publicacaoOriginal->texto;
             $novaPublicacao->id_publicacao_original = $publicacaoOriginal->id;
             $novaPublicacao->id_compartilhador = $usuario->id;
-            $novaPublicacao->nome_compartilhador = $usuario->name;
 
             if ($publicacaoOriginal->imagem !== null) {
                 $novaPublicacao->imagem = $publicacaoOriginal->imagem;
@@ -114,5 +111,19 @@ class Publicacoes extends Controller
         } catch(\Exception $e) {
             Log::error($e);
         }
+    }
+
+    public function obterCriadorECompartilhador(Request $request)
+    {
+        $idCriador = $request->input('id_criador');
+        $idCompartilhador = $request->input('id_compartilhador');
+
+        $criador = ModelUsuarios::where('id', $idCriador)->first();
+        $compartilhador = ModelUsuarios::where('id', $idCompartilhador)->first();
+
+        return response()->json([
+            'criador' => $criador,
+            'compartilhador' => $compartilhador
+        ]);
     }
 }
