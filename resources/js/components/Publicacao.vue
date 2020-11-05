@@ -1,38 +1,50 @@
 <template>
 <div :id="'publicacao-' + publicacao.id" class="corpo">
     <div class="col-md-12 col-sm-12 col-xs-12">
-        <div class="texto-nome-usuario">
-            <template v-if="publicacao.id_criador == usuario
-                || publicacao.id_compartilhador == usuario">
-                <a class="menu-opcoes-publicacao" data-toggle="dropdown">
-                    <i class="fas fa-ellipsis-h"></i>
-                </a>
+        <div class="row texto-nome-usuario">
+            <div class="col-10">
+                <template v-if="compartilhador">
+                    <img class="imagem-usuario-publicacao"
+                        :src="'/public/uploads/' + compartilhador.imagem"
+                    />
 
-                <div class="dropdown-menu dropdown-menu-left menu-opcoes-item">
-                    <button class="dropdown-item atencao"
-                        @click="apagar(publicacao.id)"
-                    >
-                        <i class="fas fa-trash"></i> Apagar publicação
-                    </button>
-                </div>
-            </template>
+                    <a class="link-perfil" :href="'/perfil/' + compartilhador.id">
+                        {{ compartilhador.name }}
+                    </a>
+                    <span class="texto-secundario">
+                        - Compartilhou uma publicação de
+                        <a class="link-perfil" :href="'/perfil/' + criador.id">
+                            {{ criador.name }}
+                        </a>
+                    </span>
+                </template>
+                <template v-else>
+                    <img class="imagem-usuario-publicacao"
+                        :src="'/public/uploads/' + criador.imagem"
+                    />
 
-            <template v-if="compartilhador">
-                <a class="link-perfil" :href="'/perfil/' + compartilhador.id">
-                    {{ compartilhador.name }}
-                </a>
-                <span class="texto-secundario">
-                    - Compartilhou uma publicação de
                     <a class="link-perfil" :href="'/perfil/' + criador.id">
                         {{ criador.name }}
                     </a>
-                </span>
-            </template>
-            <template v-else>
-                <a class="link-perfil" :href="'/perfil/' + criador.id">
-                    {{ criador.name }}
-                </a>
-            </template>
+                </template>
+            </div>
+
+            <div class="col-2">
+                <template v-if="publicacao.id_criador == usuario
+                    || publicacao.id_compartilhador == usuario">
+                    <a class="menu-opcoes-publicacao" data-toggle="dropdown">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right menu-opcoes-item">
+                        <button class="dropdown-item atencao"
+                            @click="apagar(publicacao.id)"
+                        >
+                            <i class="fas fa-trash"></i> Apagar publicação
+                        </button>
+                    </div>
+                </template>
+            </div>
         </div>
 
         <div class="texto-principal">

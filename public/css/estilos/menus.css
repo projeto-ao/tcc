@@ -26,6 +26,7 @@
 .menu-opcoes-publicacao {
   color: #bdc3c7 !important;
   font-size: 1rem;
+  float: right;
 }
 
 /* dropdown-item se refere a um estilo do Bootstrap */
@@ -61,10 +62,8 @@
     width: -webkit-fill-available; /* Para uso em navegadores webkit */
     text-align: right;
   }
-}
 
-.imagem-menu {
-  border-radius: 50%;
-  height: 3rem;
-  width: 3rem;
+  .menu-opcoes-publicacao {
+    color: var(--cor-de-destaque) !important;
+  }
 }

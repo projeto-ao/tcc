@@ -1,0 +1,23 @@
+/*
+  Estilos de formatação de imagens
+  Preferencialmente usar imagem-* como prefixos.
+  Ex: imagem-perfil {}
+*/
+
+.imagem-perfil {
+  border-radius: 50%;
+  height: 9rem;
+  width: 9rem;
+}
+
+.imagem-usuario-publicacao {
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+
+.imagem-menu {
+  border-radius: 50%;
+  height: 3rem;
+  width: 3rem;
+}
