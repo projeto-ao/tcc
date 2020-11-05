@@ -5,8 +5,10 @@
             <div class="col-10">
                 <template v-if="compartilhador">
                     <img class="imagem-usuario-publicacao"
-                        :src="'/public/uploads/' + compartilhador.imagem"
-                    />
+                        :src="compartilhador.imagem
+                            ? '/public/uploads/' + compartilhador.imagem
+                            : '/public/imagens/foto_perfil_padrao.jpeg'
+                    "/>
 
                     <a class="link-perfil" :href="'/perfil/' + compartilhador.id">
                         {{ compartilhador.name }}
@@ -20,8 +22,10 @@
                 </template>
                 <template v-else>
                     <img class="imagem-usuario-publicacao"
-                        :src="'/public/uploads/' + criador.imagem"
-                    />
+                        :src="criador.imagem
+                            ? '/public/uploads/' + criador.imagem
+                            : '/public/imagens/foto_perfil_padrao.jpeg'
+                    "/>
 
                     <a class="link-perfil" :href="'/perfil/' + criador.id">
                         {{ criador.name }}
