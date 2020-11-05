@@ -22,7 +22,7 @@ class Comentarios extends Controller
             ->get()
             ->toJson();
 
-        return view('linha-do-tempo.comentarios', [
+        return view('comentarios.index', [
             'publicacao' => $publicacao,
             'comentarios' => $comentarios
         ]);
