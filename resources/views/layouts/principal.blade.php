@@ -15,6 +15,13 @@
     <link rel="stylesheet" href="{{ asset('public/css/importador.css') }}">
 
     @yield('css')
+    <style>
+      @media (max-width: 479px) {
+        body {
+          background-size: contain;
+        }
+      }
+    </style>
   </head>
 
   <body background="{{ asset('public/imagens/pagina-inicial/arvores.jpg') }}">
