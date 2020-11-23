@@ -1,6 +1,6 @@
 # Projeto AO
 Trabalho de conclusão de curso, realizado na ETEC Dep. Salim Sedeh, Leme-SP no ano de 2020.  
-Desenvolvido por Gustavo Henrique Pinto (@ghp2201) e Thayná Alves de Sousa (@thaynaAS).  
+Desenvolvido por [Gustavo Henrique Pinto][2] e [Thayná Alves de Sousa][3].  
 
 ## O que é AO?
 AO significa mundos na língua Maori, o que representa muito bem a ideia dessa rede social. Ela é voltada em prol do meio ambiente, onde você se conectará com outras pessoas com a mesma ideia de preservação ambiental, nos conectando a um novo mundo.  
@@ -34,3 +34,5 @@ A equipe de desenvolvimento não se responsabiliza por quaisquer erros ocasionad
 
 
 [1]: https://www.docker.com/get-started
+[2]: https://github.com/ghp2201
+[3]: https://github.com/thaynaas
