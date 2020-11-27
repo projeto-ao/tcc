@@ -30,6 +30,11 @@
         </a>
 
         <div class="dropdown-divider"></div>
+        <a class="dropdown-item" href="/ajuda/">
+            <span>Ajuda </span>
+            <i class="fas fa-question-circle"></i>
+        </a>
+
         <a class="dropdown-item" href="/sair/">
             <span>Sair </span>
             <i class="fas fa-sign-out-alt"></i>

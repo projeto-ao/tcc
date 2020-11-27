@@ -22,5 +22,9 @@
         </button>
       </div>
     </div>
+
+    <a href="{{ route('ajuda') }}" class="col-1 offset-11">
+      <i class="fas fa-question-circle"></i>
+    </a>
   </div>
 </form>

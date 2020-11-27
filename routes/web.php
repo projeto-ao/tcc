@@ -37,4 +37,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/mural', 'Mural@index');
     Route::post('/nova-campanha', 'Mural@nova')->name('nova-campanha');
+
+    Route::get('/ajuda', function () {
+        return view('ajuda.index');
+    })->name('ajuda');
 });
