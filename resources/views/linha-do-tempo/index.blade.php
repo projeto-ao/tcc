@@ -1,6 +1,6 @@
 @extends('layouts.principal')
 
-@section('titulo', 'AO - Linha do Tempo')
+@section('titulo', 'AO - Início')
 
 @section('css')
 @endsection
