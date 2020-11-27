@@ -34,4 +34,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/sair', 'Perfis@sair');
 
     Route::get('/obter-criador-e-compartilhador/', 'Publicacoes@obterCriadorECompartilhador');
+
+    Route::get('/mural', 'Mural@index');
+    Route::post('/nova-campanha', 'Mural@nova')->name('nova-campanha');
 });

@@ -53,3 +53,19 @@
     background-color: var(--cor-de-destaque) !important;
   }
 }
+
+.nav-pills .nav-item .nav-link {
+  background-color: var(--cor-botoes) !important;
+  color: var(--cor-texto-botoes) !important;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 1rem;
+}
+
+.nav-pills .nav-item .nav-link:hover {
+  background-color: var(--cor-de-destaque) !important;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  background-color: var(--cor-de-destaque) !important;
+}

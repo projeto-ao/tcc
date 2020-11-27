@@ -14,6 +14,11 @@
             <i class="fas fa-tree"></i>
         </a>
 
+        <a class="dropdown-item" href="/mural/">
+            <span>Mural </span>
+            <i class="fas fa-columns"></i>
+        </a>
+
         <a class="dropdown-item" id="nova-publicacao" data-toggle="modal" data-target="#modal-nova-publicacao">
             <span>Novo </span>
             <i class="fas fa-plus"></i>
