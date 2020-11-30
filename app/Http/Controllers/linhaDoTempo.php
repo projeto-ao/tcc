@@ -9,7 +9,16 @@ class linhaDoTempo extends Controller
 {
     public function index()
     {
-        $publicacoes = ModelPublicacoes::all()->toJson();
+        $usuario = \Auth::user();
+
+        $seguindo = explode(',', $usuario->seguindo);
+
+        $publicacoes = ModelPublicacoes::whereIn('id_criador', $seguindo)
+            ->orWhereIn('id_compartilhador', $seguindo)
+            ->orWhere('id_criador', $usuario->id)
+            ->orWhere('id_compartilhador', $usuario->id)
+            ->get()
+            ->toJson();
 
         return view('linha-do-tempo.index', [
             'publicacoes' => $publicacoes,

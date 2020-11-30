@@ -32,6 +32,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/perfil/{id}', 'Perfis@index');
     Route::get('/sair', 'Perfis@sair');
+    Route::get('/seguir/{id}', 'Perfis@seguir');
 
     Route::get('/obter-criador-e-compartilhador/', 'Publicacoes@obterCriadorECompartilhador');
 
