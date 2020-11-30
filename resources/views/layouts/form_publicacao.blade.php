@@ -3,7 +3,7 @@
 
   <div class="col-12 col-md-12 form-group">
     <div class="md-form mb-4 success-textarea active-success-textarea">
-      <textarea id="texto" name="texto" class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="255" required></textarea>
+      <textarea id="texto" name="texto" class="md-textarea form-control" rows="4" placeholder="Escreva algo incrível ..." maxlength="200" required></textarea>
     </div>
 
     <span id="nome-imagem"></span>
