@@ -34,5 +34,5 @@ A equipe de desenvolvimento não se responsabiliza por quaisquer erros ocasionad
 
 
 [1]: https://www.docker.com/get-started
-[2]: https://github.com/ghp2201
+[2]: https://github.com/gustapinto
 [3]: https://github.com/thaynaas
