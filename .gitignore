@@ -7,3 +7,5 @@
 /public/uploads/*.jpg
 /public/uploads/*.jpeg
 /public/uploads/*.png
+/.devcontainer/
+/.vscode/

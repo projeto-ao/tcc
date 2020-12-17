@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User as ModelUsuarios;
 use App\Publicacoes as ModelPublicacoes;
+use App\Events\AtualizaLinhaDoTempo;
 use App\Http\Controllers\ImagemHelper;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
@@ -35,6 +36,8 @@ class Publicacoes extends Controller
         } catch(\Exception $e) {
             Log::error($e);
         }
+
+        event(new AtualizaLinhaDoTempo($publicacao));
 
         return redirect('linha-do-tempo');
     }
