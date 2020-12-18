@@ -25,9 +25,9 @@ export default {
         Publicacao
     },
     mounted () {
-        Echo.channel(process.env.PUSHER_CHANNEL)
-            .listen('.AtualizaLinhaDoTempo', (e) => {
-                this.pubs["publicacao"] = e.nova_publicacao
+        window.Echo.channel(process.env.MIX_PUSHER_CHANNEL)
+            .listen('.atualiza.publicacoes', (e) => {
+                this.pubs.push(e.nova_publicacao);
             })
     },
 }

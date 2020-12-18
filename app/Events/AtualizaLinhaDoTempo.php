@@ -24,7 +24,7 @@ class AtualizaLinhaDoTempo implements ShouldBroadcastNow
      */
     public function __construct($publicacao)
     {
-        $this->nova_publicacao = $publicacao->get()->toJson();
+        $this->nova_publicacao = $publicacao;
     }
 
     /**
@@ -35,5 +35,10 @@ class AtualizaLinhaDoTempo implements ShouldBroadcastNow
     public function broadcastOn()
     {
         return new Channel(env('PUSHER_CHANNEL'));
+    }
+
+    public function broadcastAS()
+    {
+        return 'atualiza.publicacoes';
     }
 }
