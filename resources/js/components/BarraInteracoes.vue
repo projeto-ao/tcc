@@ -32,8 +32,6 @@
 </template>
 
 <script>
-import { requisicao } from '../utillidadesPublicacao.js';
-
 export default {
     props: ['publicacao'],
     data () {
@@ -46,21 +44,18 @@ export default {
     },
     methods: {
         curtir(id) {
-            requisicao({
-                idPublicacao: id,
-                requisicao: 'curtir',
-            });
-
-            this.curtidas += 1;
+            window.axios
+                .get('/curtir/' + id)
+                .then(() => {
+                    this.curtidas += 1;
+                })
         },
         compartilhar(id) {
-            requisicao({
-                idPublicacao: id,
-                requisicao: 'compartilhar',
-                recarregar: true //lembrar de tentar mudar p/false
-            });
-
-            this.compartilhamentos += 1;
+            window.axios
+                .get('/compartilhar/' + id)
+                .then(() => {
+                    this.compartilhamentos += 1;
+                })
         }
     }
 }

@@ -27,8 +27,6 @@ export default {
             texto: this.comentario.texto,
         }
     },
-    methods: {
-    }
 }
 </script>
 

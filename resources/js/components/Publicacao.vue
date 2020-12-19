@@ -69,7 +69,6 @@
 </template>
 
 <script>
-import { requisicao, obterCriadorECompartilhador } from '../utillidadesPublicacao.js';
 import BarraInteracoes from './BarraInteracoes.vue';
 import BarraComentario from './BarraComentario.vue';
 
@@ -87,32 +86,27 @@ export default {
     },
     methods: {
         apagar(id) {
-            requisicao({
-                idPublicacao: id,
-                idElemento: "publicacao-" + id,
-                requisicao: 'apagar',
-                apagar: true,
-            });
+            window.axios
+                .get('/apagar/' + id)
+                .then(() => {
+                    let elemento = document.getElementById('publicacao-' + id);
+
+                    elemento.innerHTML = null;
+                })
         },
     },
-    mounted: function() {
+    mounted () {
         var self = this;
 
-        $.ajax({
-            url: '/obter-criador-e-compartilhador/',
-            method: 'GET',
-            data: {
+        window.axios
+            .post('/obter-criador-e-compartilhador', {
                 id_criador: self.publicacao.id_criador,
-                id_compartilhador: self.publicacao.id_compartilhador
-            },
-            success: function(dados) {
-                self.criador = dados.criador;
-                self.compartilhador = dados.compartilhador;
-            },
-            error: function() {
-                alert(mensagemDeErro);
-            },
-        });
+                id_compartilhador: self.publicacao.id_compartilhador,
+            })
+            .then(resposta => {
+                self.criador = resposta.data.criador;
+                self.compartilhador = resposta.data.compartilhador;
+            })
     }
 }
 </script>

@@ -8,7 +8,7 @@
 
         <div class="col-md-10 offset-md-1">
             <div class="corpo">
-                <div v-for="comentario in comentarios.slice().reverse()"
+                <div v-for="comentario in coments"
                     :key="comentario.id"
                 >
                     <Comentario
@@ -30,7 +30,18 @@ export default {
     components: {
         Publicacao,
         Comentario
-    }
+    },
+    data () {
+        return {
+            coments: this.comentarios,
+        }
+    },
+    mounted () {
+        window.Echo.channel(process.env.MIX_PUSHER_CHANNEL)
+            .listen('.atualiza.comentarios', (e) => {
+                this.coments.push(e.novoComentario);
+            })
+    },
 }
 </script>
 

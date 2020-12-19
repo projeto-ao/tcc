@@ -114,6 +114,22 @@ class Publicacoes extends Controller
         } catch(\Exception $e) {
             Log::error($e);
         }
+
+        event(new AtualizaLinhaDoTempo($novaPublicacao));
+    }
+
+    public function obterPublicacoes()
+    {
+        $usuario = \Auth::user();
+
+        $seguindo = explode(',', $usuario->seguindo);
+
+        return ModelPublicacoes::whereIn('id_criador', $seguindo)
+            ->orWhereIn('id_compartilhador', $seguindo)
+            ->orWhere('id_criador', $usuario->id)
+            ->orWhere('id_compartilhador', $usuario->id)
+            ->get()
+            ->toJson();
     }
 
     public function obterCriadorECompartilhador(Request $request)

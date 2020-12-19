@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Publicacoes as ModelPublicacoes;
 use App\Comentarios as ModelComentarios;
+use App\Events\AtualizaListaDeComentarios;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 
@@ -28,12 +29,12 @@ class Comentarios extends Controller
         ]);
     }
 
-    public function novo(Request $request, $idPublicacao)
+    public function novo(Request $request)
     {
         $usuario = \Auth::user();
 
         $comentario = new ModelComentarios;
-        $publicacao = ModelPublicacoes::where('id', $idPublicacao)->first();
+        $publicacao = ModelPublicacoes::where('id', $request->input('idPublicacao'))->first();
 
         try {
             DB::beginTransaction();
@@ -52,6 +53,6 @@ class Comentarios extends Controller
             Log::error($e);
         }
 
-        return back();
+        event(new AtualizaListaDeComentarios($comentario));
     }
 }

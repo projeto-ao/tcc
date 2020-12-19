@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Events\AtualizaLinhaDoTempo;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,12 +15,11 @@ use App\Events\AtualizaLinhaDoTempo;
 
 Auth::routes();
 
-Route::get('/', function () {
-    return view('pagina-inicial.index');
-})->name('pagina-inicial');
+Route::view('/', 'pagina-inicial.index')->name('pagina-inicial');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/linha-do-tempo', 'linhaDoTempo@index')->name('linha-do-tempo');
+    Route::view('/linha-do-tempo', 'linha-do-tempo.index')->name('linha-do-tempo');
+    Route::view('/ajuda', 'ajuda.index')->name('ajuda');
 
     Route::post('/nova-publicacao', 'Publicacoes@nova')->name('nova-publicacao');
     Route::get('/curtir/{id}', 'Publicacoes@curtir');
@@ -29,18 +27,18 @@ Route::middleware('auth')->group(function () {
     Route::get('/compartilhar/{id}', 'Publicacoes@compartilhar');
 
     Route::get('/comentarios/{idPublicacao}', 'Comentarios@index');
-    Route::get('/comentarios/novo/{idPublicacao}', 'Comentarios@novo');
+    Route::post('/comentarios/novo', 'Comentarios@novo');
 
     Route::get('/perfil/{id}', 'Perfis@index');
     Route::get('/sair', 'Perfis@sair');
     Route::get('/seguir/{id}', 'Perfis@seguir');
 
-    Route::get('/obter-criador-e-compartilhador/', 'Publicacoes@obterCriadorECompartilhador');
+    Route::get('/obter-usuario-conectado', function() {
+        return \Auth::user()->id;
+    });
+    Route::get('/obter-publicacoes', 'Publicacoes@obterPublicacoes');
+    Route::post('/obter-criador-e-compartilhador', 'Publicacoes@obterCriadorECompartilhador');
 
     Route::get('/mural', 'Mural@index');
     Route::post('/nova-campanha', 'Mural@nova')->name('nova-campanha');
-
-    Route::get('/ajuda', function () {
-        return view('ajuda.index');
-    })->name('ajuda');
 });
